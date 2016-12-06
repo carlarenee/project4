@@ -32,5 +32,4 @@ Watson Tone Analyzer
 ## License
 
 
-
-![alt text](https://wireframe.cc/y0jt0U)
+![wireframe 1](images/wecomePageWireframe.png)
