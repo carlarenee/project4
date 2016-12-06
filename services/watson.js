@@ -14,7 +14,6 @@ const analyzer = watson.tone_analyzer({
 
 
 const analyzeText = (req, res, next) => {
-  console.log('heythere')
   analyzer.tone({
     // req.body.main,
     text: 'hi there i really really love taquitos'
@@ -26,6 +25,7 @@ const analyzeText = (req, res, next) => {
         res.data = tone;
         next();
       }
+      console.log(tone.document_tone.tone_categories[0]);
   });
 }
 
