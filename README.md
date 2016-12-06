@@ -6,8 +6,17 @@ Insired by the Momentum Chrome extension and meditation mobile app, Headspace, A
 
 User Story: a user wakes up, types the first thought that comes to mind: 'I'm feeling tired'. The app analysis would provide feedback: 'Hey, you sound negative, here's something to think about: '. The app would then generate 
 
-## Code Example
+## App Functionality Requirements
 
+Login/Signup for user account. 
+Input form to collect a phrase from a user. 
+Post input to Watson Tone Analyzer API.
+Grab output from Watson API and render analytics for user.
+Based on analytics, send quote or exercise (stored in database) back to user.
+
+## App Add On Ideas
+
+In addition to a quote or exercise, provide user with mood over time analytics to see patterns.
 
 
 ## Motivation
