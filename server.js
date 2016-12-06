@@ -5,6 +5,10 @@ const logger  = require('morgan');
 const path    = require('path');
 const cookieParser  = require('cookie-parser');
 const bodyParser = require('body-parser');
+const usersRouter   = require('./routes/api/users');
+const authRouter    = require('./routes/api/auth');
+const watsonRouter = require('./routes/api/watson');
+
 const app     = express();
 const PORT    = process.argv[2] || process.env.PORT || 3000;
 
@@ -16,4 +20,8 @@ app.use(cookieParser());
 
 app.use(bodyParser.json());
 
-app.listen(PORT, () => console.log('server here! listening on', PORT));
+app.use('/watson', watsonRouter);
+app.use('/api/users', usersRouter);
+app.use('/api/auth', authRouter);
+
+app.listen(PORT, () => console.log('Hey there', PORT));
