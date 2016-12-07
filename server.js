@@ -20,7 +20,7 @@ app.use(cookieParser());
 
 app.use(bodyParser.json());
 
-app.use('/watson', watsonRouter);
+app.use('/api/watson', watsonRouter);
 app.use('/api/users', usersRouter);
 app.use('/api/auth', authRouter);
 

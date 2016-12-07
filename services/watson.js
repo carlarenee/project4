@@ -1,6 +1,5 @@
 const watson = require('watson-developer-cloud');
 
-
 const username = process.env.WATSON_USER;
 const password = process.env.WATSON_PASSWORD;
 

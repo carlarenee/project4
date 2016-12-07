@@ -9,6 +9,7 @@ class App extends Component {
     super();
 
     this.state = {
+      data: [],
       signup: {
         username: '',
         password: ''
@@ -111,6 +112,16 @@ class App extends Component {
   }
 ///////////////////////////////////////////////////////////////////////
 
+getWatsonData() {
+  fetch(`/api/watson`)
+  .then(r => r.json())
+  .then((tone) => {
+    this.setState({
+      data: tone
+    })
+  })
+};
+
   render(){
     return (
       <div>
@@ -135,6 +146,7 @@ class App extends Component {
           <input type="text" />
           <input type="submit" />
         </form>
+        <button onClick={() => this.getWatsonData()}>get watson info</button>
       </div>
       )
     }
