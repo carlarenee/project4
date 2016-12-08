@@ -9,7 +9,7 @@ class App extends Component {
     super();
 
     this.state = {
-      data: [],
+      watsonData: {},
       signup: {
         username: '',
         password: ''
@@ -21,6 +21,28 @@ class App extends Component {
       }
     };
   }
+
+  getWatsonData() {
+  fetch(`/api/watson`)
+  .then(r => r.json())
+  .then((tone) => {
+    this.setState({
+      watsonData: tone.document_tone.tone_categories
+    })
+    console.log('yoyoyo', this.state.watsonData);
+  })
+};
+
+
+// { tones:
+//    [ { score: 0.058084, tone_id: 'anger', tone_name: 'Anger' },
+//      { score: 0.02035, tone_id: 'disgust', tone_name: 'Disgust' },
+//      { score: 0.028603, tone_id: 'fear', tone_name: 'Fear' },
+//      { score: 0.571004, tone_id: 'joy', tone_name: 'Joy' },
+//      { score: 0.363121, tone_id: 'sadness', tone_name: 'Sadness' } ],
+//   category_id: 'emotion_tone',
+//   category_name: 'Emotion Tone' }
+
 
 ////////////////////////////////////////User Auth from Pern React Template
     updateFormSignUpUsername(e) {
@@ -111,16 +133,6 @@ class App extends Component {
     alert(msg);
   }
 ///////////////////////////////////////////////////////////////////////
-
-getWatsonData() {
-  fetch(`/api/watson`)
-  .then(r => r.json())
-  .then((tone) => {
-    this.setState({
-      data: tone
-    })
-  })
-};
 
   render(){
     return (

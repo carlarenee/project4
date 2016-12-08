@@ -81,7 +81,7 @@
 	// since they are just generating DOM strings.
 	DOM:ReactDOMFactories,version:ReactVersion,// Deprecated hook for JSX spread, don't use this for anything.
 	__spread:__spread};module.exports=React;
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./~/process/browser.js */ 3)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./../../process/browser.js */ 3)))
 
 /***/ },
 /* 3 */
@@ -228,7 +228,7 @@
 	 */var addPoolingTo=function addPoolingTo(CopyConstructor,pooler){// Casting as any so that flow ignores the actual implementation and trusts
 	// it to match the type we declared
 	var NewKlass=CopyConstructor;NewKlass.instancePool=[];NewKlass.getPooled=pooler||DEFAULT_POOLER;if(!NewKlass.poolSize){NewKlass.poolSize=DEFAULT_POOL_SIZE;}NewKlass.release=standardReleaser;return NewKlass;};var PooledClass={addPoolingTo:addPoolingTo,oneArgumentPooler:oneArgumentPooler,twoArgumentPooler:twoArgumentPooler,threeArgumentPooler:threeArgumentPooler,fourArgumentPooler:fourArgumentPooler,fiveArgumentPooler:fiveArgumentPooler};module.exports=PooledClass;
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./~/process/browser.js */ 3)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./../../process/browser.js */ 3)))
 
 /***/ },
 /* 7 */
@@ -280,7 +280,7 @@
 	 * will remain to ensure logic does not differ in production.
 	 */function invariant(condition,format,a,b,c,d,e,f){if(process.env.NODE_ENV!=='production'){if(format===undefined){throw new Error('invariant requires an error message argument');}}if(!condition){var error;if(format===undefined){error=new Error('Minified exception occurred; use the non-minified dev environment '+'for the full error message and additional helpful warnings.');}else{var args=[a,b,c,d,e,f];var argIndex=0;error=new Error(format.replace(/%s/g,function(){return args[argIndex++];}));error.name='Invariant Violation';}error.framesToPop=1;// we don't care about invariant's own frame
 	throw error;}}module.exports=invariant;
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./~/process/browser.js */ 3)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./../../process/browser.js */ 3)))
 
 /***/ },
 /* 9 */
@@ -368,7 +368,7 @@
 	 * @return {boolean} True if `object` is a valid component.
 	 * @final
 	 */ReactElement.isValidElement=function(object){return(typeof object==='undefined'?'undefined':_typeof(object))==='object'&&object!==null&&object.$$typeof===REACT_ELEMENT_TYPE;};module.exports=ReactElement;
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./~/process/browser.js */ 3)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./../../process/browser.js */ 3)))
 
 /***/ },
 /* 10 */
@@ -421,7 +421,7 @@
 	// to find the callsite that caused this warning to fire.
 	throw new Error(message);}catch(x){}};warning=function warning(condition,format){if(format===undefined){throw new Error('`warning(condition, format, ...args)` requires a warning '+'message argument');}if(format.indexOf('Failed Composite propType: ')===0){return;// Ignore CompositeComponent proptype check.
 	}if(!condition){for(var _len2=arguments.length,args=Array(_len2>2?_len2-2:0),_key2=2;_key2<_len2;_key2++){args[_key2-2]=arguments[_key2];}printWarning.apply(undefined,[format].concat(args));}};})();}module.exports=warning;
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./~/process/browser.js */ 3)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./../../process/browser.js */ 3)))
 
 /***/ },
 /* 12 */
@@ -464,7 +464,7 @@
 	 */'use strict';var canDefineProperty=false;if(process.env.NODE_ENV!=='production'){try{// $FlowFixMe https://github.com/facebook/flow/issues/285
 	Object.defineProperty({},'x',{get:function get(){}});canDefineProperty=true;}catch(x){// IE will fail on defineProperty
 	}}module.exports=canDefineProperty;
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./~/process/browser.js */ 3)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./../../process/browser.js */ 3)))
 
 /***/ },
 /* 14 */
@@ -548,7 +548,7 @@
 	 * @param {?*} traverseContext Context for traversal.
 	 * @return {!number} The number of children in this subtree.
 	 */function traverseAllChildren(children,callback,traverseContext){if(children==null){return 0;}return traverseAllChildrenImpl(children,'',callback,traverseContext);}module.exports=traverseAllChildren;
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./~/process/browser.js */ 3)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./../../process/browser.js */ 3)))
 
 /***/ },
 /* 16 */
@@ -671,7 +671,7 @@
 	 * we would like to deprecate them, we're not going to move them over to this
 	 * modern base class. Instead, we define a getter that warns if it's accessed.
 	 */if(process.env.NODE_ENV!=='production'){var deprecatedAPIs={isMounted:['isMounted','Instead, make sure to clean up subscriptions and pending requests in '+'componentWillUnmount to prevent memory leaks.'],replaceState:['replaceState','Refactor your code to use setState instead (see '+'https://github.com/facebook/react/issues/3236).']};var defineDeprecationWarning=function defineDeprecationWarning(methodName,info){if(canDefineProperty){Object.defineProperty(ReactComponent.prototype,methodName,{get:function get(){process.env.NODE_ENV!=='production'?warning(false,'%s(...) is deprecated in plain JavaScript React classes. %s',info[0],info[1]):void 0;return undefined;}});}};for(var fnName in deprecatedAPIs){if(deprecatedAPIs.hasOwnProperty(fnName)){defineDeprecationWarning(fnName,deprecatedAPIs[fnName]);}}}module.exports=ReactComponent;
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./~/process/browser.js */ 3)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./../../process/browser.js */ 3)))
 
 /***/ },
 /* 19 */
@@ -735,7 +735,7 @@
 	   * @param {object} partialState Next partial state to be merged with state.
 	   * @internal
 	   */enqueueSetState:function enqueueSetState(publicInstance,partialState){warnNoop(publicInstance,'setState');}};module.exports=ReactNoopUpdateQueue;
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./~/process/browser.js */ 3)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./../../process/browser.js */ 3)))
 
 /***/ },
 /* 20 */
@@ -753,7 +753,7 @@
 	 * of patent rights can be found in the PATENTS file in the same directory.
 	 *
 	 */'use strict';var emptyObject={};if(process.env.NODE_ENV!=='production'){Object.freeze(emptyObject);}module.exports=emptyObject;
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./~/process/browser.js */ 3)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./../../process/browser.js */ 3)))
 
 /***/ },
 /* 21 */
@@ -1087,7 +1087,7 @@
 	// initializer or constructor respectively.
 	if(Constructor.getDefaultProps){Constructor.getDefaultProps.isReactClassApproved={};}if(Constructor.prototype.getInitialState){Constructor.prototype.getInitialState.isReactClassApproved={};}}!Constructor.prototype.render?process.env.NODE_ENV!=='production'?invariant(false,'createClass(...): Class specification must implement a `render` method.'):_prodInvariant('83'):void 0;if(process.env.NODE_ENV!=='production'){process.env.NODE_ENV!=='production'?warning(!Constructor.prototype.componentShouldUpdate,'%s has a method called '+'componentShouldUpdate(). Did you mean shouldComponentUpdate()? '+'The name is phrased as a question because the function is '+'expected to return a value.',spec.displayName||'A component'):void 0;process.env.NODE_ENV!=='production'?warning(!Constructor.prototype.componentWillRecieveProps,'%s has a method called '+'componentWillRecieveProps(). Did you mean componentWillReceiveProps()?',spec.displayName||'A component'):void 0;}// Reduce time spent doing lookups by setting these on the prototype.
 	for(var methodName in ReactClassInterface){if(!Constructor.prototype[methodName]){Constructor.prototype[methodName]=null;}}return Constructor;},injection:{injectMixin:function injectMixin(mixin){injectedMixins.push(mixin);}}};module.exports=ReactClass;
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./~/process/browser.js */ 3)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./../../process/browser.js */ 3)))
 
 /***/ },
 /* 23 */
@@ -1106,7 +1106,7 @@
 	 *
 	 * 
 	 */'use strict';var ReactPropTypeLocationNames={};if(process.env.NODE_ENV!=='production'){ReactPropTypeLocationNames={prop:'prop',context:'context',childContext:'child context'};}module.exports=ReactPropTypeLocationNames;
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./~/process/browser.js */ 3)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./../../process/browser.js */ 3)))
 
 /***/ },
 /* 24 */
@@ -1134,7 +1134,7 @@
 	 * @public
 	 */var ReactDOMFactories={a:createDOMFactory('a'),abbr:createDOMFactory('abbr'),address:createDOMFactory('address'),area:createDOMFactory('area'),article:createDOMFactory('article'),aside:createDOMFactory('aside'),audio:createDOMFactory('audio'),b:createDOMFactory('b'),base:createDOMFactory('base'),bdi:createDOMFactory('bdi'),bdo:createDOMFactory('bdo'),big:createDOMFactory('big'),blockquote:createDOMFactory('blockquote'),body:createDOMFactory('body'),br:createDOMFactory('br'),button:createDOMFactory('button'),canvas:createDOMFactory('canvas'),caption:createDOMFactory('caption'),cite:createDOMFactory('cite'),code:createDOMFactory('code'),col:createDOMFactory('col'),colgroup:createDOMFactory('colgroup'),data:createDOMFactory('data'),datalist:createDOMFactory('datalist'),dd:createDOMFactory('dd'),del:createDOMFactory('del'),details:createDOMFactory('details'),dfn:createDOMFactory('dfn'),dialog:createDOMFactory('dialog'),div:createDOMFactory('div'),dl:createDOMFactory('dl'),dt:createDOMFactory('dt'),em:createDOMFactory('em'),embed:createDOMFactory('embed'),fieldset:createDOMFactory('fieldset'),figcaption:createDOMFactory('figcaption'),figure:createDOMFactory('figure'),footer:createDOMFactory('footer'),form:createDOMFactory('form'),h1:createDOMFactory('h1'),h2:createDOMFactory('h2'),h3:createDOMFactory('h3'),h4:createDOMFactory('h4'),h5:createDOMFactory('h5'),h6:createDOMFactory('h6'),head:createDOMFactory('head'),header:createDOMFactory('header'),hgroup:createDOMFactory('hgroup'),hr:createDOMFactory('hr'),html:createDOMFactory('html'),i:createDOMFactory('i'),iframe:createDOMFactory('iframe'),img:createDOMFactory('img'),input:createDOMFactory('input'),ins:createDOMFactory('ins'),kbd:createDOMFactory('kbd'),keygen:createDOMFactory('keygen'),label:createDOMFactory('label'),legend:createDOMFactory('legend'),li:createDOMFactory('li'),link:createDOMFactory('link'),main:createDOMFactory('main'),map:createDOMFactory('map'),mark:createDOMFactory('mark'),menu:createDOMFactory('menu'),menuitem:createDOMFactory('menuitem'),meta:createDOMFactory('meta'),meter:createDOMFactory('meter'),nav:createDOMFactory('nav'),noscript:createDOMFactory('noscript'),object:createDOMFactory('object'),ol:createDOMFactory('ol'),optgroup:createDOMFactory('optgroup'),option:createDOMFactory('option'),output:createDOMFactory('output'),p:createDOMFactory('p'),param:createDOMFactory('param'),picture:createDOMFactory('picture'),pre:createDOMFactory('pre'),progress:createDOMFactory('progress'),q:createDOMFactory('q'),rp:createDOMFactory('rp'),rt:createDOMFactory('rt'),ruby:createDOMFactory('ruby'),s:createDOMFactory('s'),samp:createDOMFactory('samp'),script:createDOMFactory('script'),section:createDOMFactory('section'),select:createDOMFactory('select'),small:createDOMFactory('small'),source:createDOMFactory('source'),span:createDOMFactory('span'),strong:createDOMFactory('strong'),style:createDOMFactory('style'),sub:createDOMFactory('sub'),summary:createDOMFactory('summary'),sup:createDOMFactory('sup'),table:createDOMFactory('table'),tbody:createDOMFactory('tbody'),td:createDOMFactory('td'),textarea:createDOMFactory('textarea'),tfoot:createDOMFactory('tfoot'),th:createDOMFactory('th'),thead:createDOMFactory('thead'),time:createDOMFactory('time'),title:createDOMFactory('title'),tr:createDOMFactory('tr'),track:createDOMFactory('track'),u:createDOMFactory('u'),ul:createDOMFactory('ul'),'var':createDOMFactory('var'),video:createDOMFactory('video'),wbr:createDOMFactory('wbr'),// SVG
 	circle:createDOMFactory('circle'),clipPath:createDOMFactory('clipPath'),defs:createDOMFactory('defs'),ellipse:createDOMFactory('ellipse'),g:createDOMFactory('g'),image:createDOMFactory('image'),line:createDOMFactory('line'),linearGradient:createDOMFactory('linearGradient'),mask:createDOMFactory('mask'),path:createDOMFactory('path'),pattern:createDOMFactory('pattern'),polygon:createDOMFactory('polygon'),polyline:createDOMFactory('polyline'),radialGradient:createDOMFactory('radialGradient'),rect:createDOMFactory('rect'),stop:createDOMFactory('stop'),svg:createDOMFactory('svg'),text:createDOMFactory('text'),tspan:createDOMFactory('tspan')};module.exports=ReactDOMFactories;
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./~/process/browser.js */ 3)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./../../process/browser.js */ 3)))
 
 /***/ },
 /* 25 */
@@ -1200,7 +1200,7 @@
 	// fixed, the key warnings will appear.)
 	if(validType){for(var i=2;i<arguments.length;i++){validateChildKeys(arguments[i],type);}}validatePropTypes(element);return element;},createFactory:function createFactory(type){var validatedFactory=ReactElementValidator.createElement.bind(null,type);// Legacy hook TODO: Warn if this is accessed
 	validatedFactory.type=type;if(process.env.NODE_ENV!=='production'){if(canDefineProperty){Object.defineProperty(validatedFactory,'type',{enumerable:false,get:function get(){process.env.NODE_ENV!=='production'?warning(false,'Factory.type is deprecated. Access the class directly '+'before passing it to createFactory.'):void 0;Object.defineProperty(this,'type',{value:type});return type;}});}}return validatedFactory;},cloneElement:function cloneElement(element,props,children){var newElement=ReactElement.cloneElement.apply(this,arguments);for(var i=2;i<arguments.length;i++){validateChildKeys(arguments[i],newElement.type);}validatePropTypes(newElement);return newElement;}};module.exports=ReactElementValidator;
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./~/process/browser.js */ 3)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./../../process/browser.js */ 3)))
 
 /***/ },
 /* 26 */
@@ -1243,7 +1243,7 @@
 	// the error boundary cleanup.
 	item.isMounted=false;var isRoot=item.parentID===0;if(isRoot){removeRoot(id);}}unmountedIDs.push(id);},purgeUnmountedComponents:function purgeUnmountedComponents(){if(ReactComponentTreeHook._preventPurging){// Should only be used for testing.
 	return;}for(var i=0;i<unmountedIDs.length;i++){var id=unmountedIDs[i];purgeDeep(id);}unmountedIDs.length=0;},isMounted:function isMounted(id){var item=getItem(id);return item?item.isMounted:false;},getCurrentStackAddendum:function getCurrentStackAddendum(topElement){var info='';if(topElement){var name=_getDisplayName(topElement);var owner=topElement._owner;info+=describeComponentFrame(name,topElement._source,owner&&owner.getName());}var currentOwner=ReactCurrentOwner.current;var id=currentOwner&&currentOwner._debugID;info+=ReactComponentTreeHook.getStackAddendumByID(id);return info;},getStackAddendumByID:function getStackAddendumByID(id){var info='';while(id){info+=describeID(id);id=ReactComponentTreeHook.getParentID(id);}return info;},getChildIDs:function getChildIDs(id){var item=getItem(id);return item?item.childIDs:[];},getDisplayName:function getDisplayName(id){var element=ReactComponentTreeHook.getElement(id);if(!element){return null;}return _getDisplayName(element);},getElement:function getElement(id){var item=getItem(id);return item?item.element:null;},getOwnerID:function getOwnerID(id){var element=ReactComponentTreeHook.getElement(id);if(!element||!element._owner){return null;}return element._owner._debugID;},getParentID:function getParentID(id){var item=getItem(id);return item?item.parentID:null;},getSource:function getSource(id){var item=getItem(id);var element=item?item.element:null;var source=element!=null?element._source:null;return source;},getText:function getText(id){var element=ReactComponentTreeHook.getElement(id);if(typeof element==='string'){return element;}else if(typeof element==='number'){return''+element;}else{return null;}},getUpdateCount:function getUpdateCount(id){var item=getItem(id);return item?item.updateCount:0;},getRootIDs:getRootIDs,getRegisteredIDs:getItemIDs};module.exports=ReactComponentTreeHook;
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./~/process/browser.js */ 3)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./../../process/browser.js */ 3)))
 
 /***/ },
 /* 27 */
@@ -1284,7 +1284,7 @@
 	!(typeof typeSpecs[typeSpecName]==='function')?process.env.NODE_ENV!=='production'?invariant(false,'%s: %s type `%s` is invalid; it must be a function, usually from React.PropTypes.',componentName||'React class',ReactPropTypeLocationNames[location],typeSpecName):_prodInvariant('84',componentName||'React class',ReactPropTypeLocationNames[location],typeSpecName):void 0;error=typeSpecs[typeSpecName](values,typeSpecName,componentName,location,null,ReactPropTypesSecret);}catch(ex){error=ex;}process.env.NODE_ENV!=='production'?warning(!error||error instanceof Error,'%s: type specification of %s `%s` is invalid; the type checker '+'function must return `null` or an `Error` but returned a %s. '+'You may have forgotten to pass an argument to the type checker '+'creator (arrayOf, instanceOf, objectOf, oneOf, oneOfType, and '+'shape all require an argument).',componentName||'React class',ReactPropTypeLocationNames[location],typeSpecName,typeof error==='undefined'?'undefined':_typeof(error)):void 0;if(error instanceof Error&&!(error.message in loggedTypeFailures)){// Only monitor this failure once because there tends to be a lot of the
 	// same error.
 	loggedTypeFailures[error.message]=true;var componentStackInfo='';if(process.env.NODE_ENV!=='production'){if(!ReactComponentTreeHook){ReactComponentTreeHook=__webpack_require__(/*! ./ReactComponentTreeHook */ 26);}if(debugID!==null){componentStackInfo=ReactComponentTreeHook.getStackAddendumByID(debugID);}else if(element!==null){componentStackInfo=ReactComponentTreeHook.getCurrentStackAddendum(element);}}process.env.NODE_ENV!=='production'?warning(false,'Failed %s type: %s%s',location,error.message,componentStackInfo):void 0;}}}}module.exports=checkReactTypeSpec;
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./~/process/browser.js */ 3)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./../../process/browser.js */ 3)))
 
 /***/ },
 /* 28 */
@@ -1393,7 +1393,7 @@
 	// See `createPrimitiveTypeChecker`.
 	function getPreciseType(propValue){var propType=getPropType(propValue);if(propType==='object'){if(propValue instanceof Date){return'date';}else if(propValue instanceof RegExp){return'regexp';}}return propType;}// Returns class name of the object, if any.
 	function getClassName(propValue){if(!propValue.constructor||!propValue.constructor.name){return ANONYMOUS;}return propValue.constructor.name;}module.exports=ReactPropTypes;
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./~/process/browser.js */ 3)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./../../process/browser.js */ 3)))
 
 /***/ },
 /* 30 */
@@ -1441,7 +1441,7 @@
 	 * @return {ReactElement} The first and only `ReactElement` contained in the
 	 * structure.
 	 */function onlyChild(children){!ReactElement.isValidElement(children)?process.env.NODE_ENV!=='production'?invariant(false,'React.Children.only expected to receive a single React element child.'):_prodInvariant('143'):void 0;return children;}module.exports=onlyChild;
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./~/process/browser.js */ 3)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./../../process/browser.js */ 3)))
 
 /***/ },
 /* 32 */
@@ -1477,7 +1477,7 @@
 	// information on preventing compatibility mode
 	var ieCompatibilityMode=document.documentMode&&document.documentMode<8;process.env.NODE_ENV!=='production'?warning(!ieCompatibilityMode,'Internet Explorer is running in compatibility mode; please add the '+'following tag to your HTML to prevent this from happening: '+'<meta http-equiv="X-UA-Compatible" content="IE=edge" />'):void 0;var expectedFeatures=[// shims
 	Array.isArray,Array.prototype.every,Array.prototype.forEach,Array.prototype.indexOf,Array.prototype.map,Date.now,Function.prototype.bind,Object.keys,String.prototype.trim];for(var i=0;i<expectedFeatures.length;i++){if(!expectedFeatures[i]){process.env.NODE_ENV!=='production'?warning(false,'One or more ES5 shims expected by React are not available: '+'https://fb.me/react-warning-polyfills'):void 0;break;}}}}if(process.env.NODE_ENV!=='production'){var ReactInstrumentation=__webpack_require__(/*! ./ReactInstrumentation */ 62);var ReactDOMUnknownPropertyHook=__webpack_require__(/*! ./ReactDOMUnknownPropertyHook */ 175);var ReactDOMNullInputValuePropHook=__webpack_require__(/*! ./ReactDOMNullInputValuePropHook */ 176);var ReactDOMInvalidARIAHook=__webpack_require__(/*! ./ReactDOMInvalidARIAHook */ 177);ReactInstrumentation.debugTool.addHook(ReactDOMUnknownPropertyHook);ReactInstrumentation.debugTool.addHook(ReactDOMNullInputValuePropHook);ReactInstrumentation.debugTool.addHook(ReactDOMInvalidARIAHook);}module.exports=ReactDOM;
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./~/process/browser.js */ 3)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./../../process/browser.js */ 3)))
 
 /***/ },
 /* 34 */
@@ -1537,7 +1537,7 @@
 	var parents=[];while(!inst._hostNode){parents.push(inst);!inst._hostParent?process.env.NODE_ENV!=='production'?invariant(false,'React DOM tree root should always have a node reference.'):_prodInvariant('34'):void 0;inst=inst._hostParent;}// Now parents contains each ancestor that does *not* have a cached native
 	// node, and `inst` is the deepest ancestor that does.
 	for(;parents.length;inst=parents.pop()){precacheChildNodes(inst,inst._hostNode);}return inst._hostNode;}var ReactDOMComponentTree={getClosestInstanceFromNode:getClosestInstanceFromNode,getInstanceFromNode:getInstanceFromNode,getNodeFromInstance:getNodeFromInstance,precacheChildNodes:precacheChildNodes,precacheNode:precacheNode,uncacheNode:uncacheNode};module.exports=ReactDOMComponentTree;
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./~/process/browser.js */ 3)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./../../process/browser.js */ 3)))
 
 /***/ },
 /* 35 */
@@ -1661,7 +1661,7 @@
 	   * Checks whether a property name is a custom attribute.
 	   * @method
 	   */isCustomAttribute:function isCustomAttribute(attributeName){for(var i=0;i<DOMProperty._isCustomAttributeFunctions.length;i++){var isCustomAttributeFn=DOMProperty._isCustomAttributeFunctions[i];if(isCustomAttributeFn(attributeName)){return true;}}return false;},injection:DOMPropertyInjection};module.exports=DOMProperty;
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./~/process/browser.js */ 3)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./../../process/browser.js */ 3)))
 
 /***/ },
 /* 37 */
@@ -1926,7 +1926,7 @@
 	 *
 	 * @constructor EventPropagators
 	 */var EventPropagators={accumulateTwoPhaseDispatches:accumulateTwoPhaseDispatches,accumulateTwoPhaseDispatchesSkipTarget:accumulateTwoPhaseDispatchesSkipTarget,accumulateDirectDispatches:accumulateDirectDispatches,accumulateEnterLeaveDispatches:accumulateEnterLeaveDispatches};module.exports=EventPropagators;
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./~/process/browser.js */ 3)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./../../process/browser.js */ 3)))
 
 /***/ },
 /* 42 */
@@ -2029,7 +2029,7 @@
 	ReactErrorUtils.rethrowCaughtError();},/**
 	   * These are needed for tests only. Do not use!
 	   */__purge:function __purge(){listenerBank={};},__getListenerBank:function __getListenerBank(){return listenerBank;}};module.exports=EventPluginHub;
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./~/process/browser.js */ 3)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./../../process/browser.js */ 3)))
 
 /***/ },
 /* 43 */
@@ -2118,7 +2118,7 @@
 	   * Exposed for unit testing.
 	   * @private
 	   */_resetEventPlugins:function _resetEventPlugins(){eventPluginOrder=null;for(var pluginName in namesToPlugins){if(namesToPlugins.hasOwnProperty(pluginName)){delete namesToPlugins[pluginName];}}EventPluginRegistry.plugins.length=0;var eventNameDispatchConfigs=EventPluginRegistry.eventNameDispatchConfigs;for(var eventName in eventNameDispatchConfigs){if(eventNameDispatchConfigs.hasOwnProperty(eventName)){delete eventNameDispatchConfigs[eventName];}}var registrationNameModules=EventPluginRegistry.registrationNameModules;for(var registrationName in registrationNameModules){if(registrationNameModules.hasOwnProperty(registrationName)){delete registrationNameModules[registrationName];}}if(process.env.NODE_ENV!=='production'){var possibleRegistrationNames=EventPluginRegistry.possibleRegistrationNames;for(var lowerCasedName in possibleRegistrationNames){if(possibleRegistrationNames.hasOwnProperty(lowerCasedName)){delete possibleRegistrationNames[lowerCasedName];}}}}};module.exports=EventPluginRegistry;
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./~/process/browser.js */ 3)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./../../process/browser.js */ 3)))
 
 /***/ },
 /* 44 */
@@ -2172,7 +2172,7 @@
 	 */function hasDispatches(event){return!!event._dispatchListeners;}/**
 	 * General utilities that are useful in creating custom Event Plugins.
 	 */var EventPluginUtils={isEndish:isEndish,isMoveish:isMoveish,isStartish:isStartish,executeDirectDispatch:executeDirectDispatch,executeDispatchesInOrder:executeDispatchesInOrder,executeDispatchesInOrderStopAtTrue:executeDispatchesInOrderStopAtTrue,hasDispatches:hasDispatches,getInstanceFromNode:function getInstanceFromNode(node){return ComponentTree.getInstanceFromNode(node);},getNodeFromInstance:function getNodeFromInstance(node){return ComponentTree.getNodeFromInstance(node);},isAncestor:function isAncestor(a,b){return TreeTraversal.isAncestor(a,b);},getLowestCommonAncestor:function getLowestCommonAncestor(a,b){return TreeTraversal.getLowestCommonAncestor(a,b);},getParentInstance:function getParentInstance(inst){return TreeTraversal.getParentInstance(inst);},traverseTwoPhase:function traverseTwoPhase(target,fn,arg){return TreeTraversal.traverseTwoPhase(target,fn,arg);},traverseEnterLeave:function traverseEnterLeave(from,to,fn,argFrom,argTo){return TreeTraversal.traverseEnterLeave(from,to,fn,argFrom,argTo);},injection:injection};module.exports=EventPluginUtils;
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./~/process/browser.js */ 3)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./../../process/browser.js */ 3)))
 
 /***/ },
 /* 45 */
@@ -2208,7 +2208,7 @@
 	   * real browser event.
 	   */if(typeof window!=='undefined'&&typeof window.dispatchEvent==='function'&&typeof document!=='undefined'&&typeof document.createEvent==='function'){var fakeNode=document.createElement('react');ReactErrorUtils.invokeGuardedCallback=function(name,func,a){var boundFunc=func.bind(null,a);var evtType='react-'+name;fakeNode.addEventListener(evtType,boundFunc,false);var evt=document.createEvent('Event');// $FlowFixMe https://github.com/facebook/flow/issues/2336
 	evt.initEvent(evtType,false,false);fakeNode.dispatchEvent(evt);fakeNode.removeEventListener(evtType,boundFunc,false);};}}module.exports=ReactErrorUtils;
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./~/process/browser.js */ 3)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./../../process/browser.js */ 3)))
 
 /***/ },
 /* 46 */
@@ -2241,7 +2241,7 @@
 	// certain that x is an Array (x could be a string with concat method).
 	if(Array.isArray(current)){if(Array.isArray(next)){current.push.apply(current,next);return current;}current.push(next);return current;}if(Array.isArray(next)){// A bit too dangerous to mutate `next`.
 	return[current].concat(next);}return[current,next];}module.exports=accumulateInto;
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./~/process/browser.js */ 3)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./../../process/browser.js */ 3)))
 
 /***/ },
 /* 47 */
@@ -2359,7 +2359,7 @@
 	 */var addPoolingTo=function addPoolingTo(CopyConstructor,pooler){// Casting as any so that flow ignores the actual implementation and trusts
 	// it to match the type we declared
 	var NewKlass=CopyConstructor;NewKlass.instancePool=[];NewKlass.getPooled=pooler||DEFAULT_POOLER;if(!NewKlass.poolSize){NewKlass.poolSize=DEFAULT_POOL_SIZE;}NewKlass.release=standardReleaser;return NewKlass;};var PooledClass={addPoolingTo:addPoolingTo,oneArgumentPooler:oneArgumentPooler,twoArgumentPooler:twoArgumentPooler,threeArgumentPooler:threeArgumentPooler,fourArgumentPooler:fourArgumentPooler,fiveArgumentPooler:fiveArgumentPooler};module.exports=PooledClass;
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./~/process/browser.js */ 3)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./../../process/browser.js */ 3)))
 
 /***/ },
 /* 51 */
@@ -2477,7 +2477,7 @@
 	  * @param {String} propName
 	  * @return {object} defineProperty object
 	  */function getPooledWarningPropertyDefinition(propName,getVal){var isFunction=typeof getVal==='function';return{configurable:true,set:set,get:get};function set(val){var action=isFunction?'setting the method':'setting the property';warn(action,'This is effectively a no-op');return val;}function get(){var action=isFunction?'accessing the method':'accessing the property';var result=isFunction?'This is a no-op function':'This is set to null';warn(action,result);return getVal;}function warn(action,result){var warningCondition=false;process.env.NODE_ENV!=='production'?warning(warningCondition,'This synthetic event is reused for performance reasons. If you\'re seeing this, '+'you\'re %s `%s` on a released/nullified synthetic event. %s. '+'If you must keep the original synthetic event around, use event.persist(). '+'See https://fb.me/react-event-pooling for more information.',action,propName,result):void 0;}}
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./~/process/browser.js */ 3)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./../../process/browser.js */ 3)))
 
 /***/ },
 /* 54 */
@@ -2669,7 +2669,7 @@
 	   *
 	   * @internal
 	   */ReactReconcileTransaction:null,batchedUpdates:batchedUpdates,enqueueUpdate:enqueueUpdate,flushBatchedUpdates:flushBatchedUpdates,injection:ReactUpdatesInjection,asap:asap};module.exports=ReactUpdates;
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./~/process/browser.js */ 3)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./../../process/browser.js */ 3)))
 
 /***/ },
 /* 57 */
@@ -2715,7 +2715,7 @@
 	   */CallbackQueue.prototype.reset=function reset(){this._callbacks=null;this._contexts=null;};/**
 	   * `PooledClass` looks for this.
 	   */CallbackQueue.prototype.destructor=function destructor(){this.reset();};return CallbackQueue;}();module.exports=PooledClass.addPoolingTo(CallbackQueue);
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./~/process/browser.js */ 3)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./../../process/browser.js */ 3)))
 
 /***/ },
 /* 58 */
@@ -2801,7 +2801,7 @@
 	   */performUpdateIfNecessary:function performUpdateIfNecessary(internalInstance,transaction,updateBatchNumber){if(internalInstance._updateBatchNumber!==updateBatchNumber){// The component's enqueued batch number should always be the current
 	// batch or the following one.
 	process.env.NODE_ENV!=='production'?warning(internalInstance._updateBatchNumber==null||internalInstance._updateBatchNumber===updateBatchNumber+1,'performUpdateIfNecessary: Unexpected batch number (current %s, '+'pending %s)',updateBatchNumber,internalInstance._updateBatchNumber):void 0;return;}if(process.env.NODE_ENV!=='production'){if(internalInstance._debugID!==0){ReactInstrumentation.debugTool.onBeforeUpdateComponent(internalInstance._debugID,internalInstance._currentElement);}}internalInstance.performUpdateIfNecessary(transaction);if(process.env.NODE_ENV!=='production'){if(internalInstance._debugID!==0){ReactInstrumentation.debugTool.onUpdateComponent(internalInstance._debugID);}}}};module.exports=ReactReconciler;
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./~/process/browser.js */ 3)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./../../process/browser.js */ 3)))
 
 /***/ },
 /* 60 */
@@ -2902,7 +2902,7 @@
 	   */removeComponentAsRefFrom:function removeComponentAsRefFrom(component,ref,owner){!isValidOwner(owner)?process.env.NODE_ENV!=='production'?invariant(false,'removeComponentAsRefFrom(...): Only a ReactOwner can have refs. You might be removing a ref to a component that was not created inside a component\'s `render` method, or you have multiple copies of React loaded (details: https://fb.me/react-refs-must-have-owner).'):_prodInvariant('120'):void 0;var ownerPublicInstance=owner.getPublicInstance();// Check that `component`'s owner is still alive and that `component` is still the current ref
 	// because we do not want to detach the ref if another component stole it.
 	if(ownerPublicInstance&&ownerPublicInstance.refs[ref]===component.getPublicInstance()){owner.detachRef(ref);}}};module.exports=ReactOwner;
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./~/process/browser.js */ 3)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./../../process/browser.js */ 3)))
 
 /***/ },
 /* 62 */
@@ -2922,7 +2922,7 @@
 	 * 
 	 */'use strict';// Trust the developer to only use ReactInstrumentation with a __DEV__ check
 	var debugTool=null;if(process.env.NODE_ENV!=='production'){var ReactDebugTool=__webpack_require__(/*! ./ReactDebugTool */ 63);debugTool=ReactDebugTool;}module.exports={debugTool:debugTool};
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./~/process/browser.js */ 3)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./../../process/browser.js */ 3)))
 
 /***/ },
 /* 63 */
@@ -2950,7 +2950,7 @@
 	// When the bug is fixed, we can `measure()` unconditionally if we want to.
 	var timeStamp=performanceNow();if(timeStamp-lastMarkTimeStamp>0.1){var measurementName=displayName+' ['+markType+']';performance.measure(measurementName,markName);}performance.clearMarks(markName);performance.clearMeasures(measurementName);}var ReactDebugTool={addHook:function addHook(hook){hooks.push(hook);},removeHook:function removeHook(hook){for(var i=0;i<hooks.length;i++){if(hooks[i]===hook){hooks.splice(i,1);i--;}}},isProfiling:function isProfiling(){return _isProfiling;},beginProfiling:function beginProfiling(){if(_isProfiling){return;}_isProfiling=true;flushHistory.length=0;resetMeasurements();ReactDebugTool.addHook(ReactHostOperationHistoryHook);},endProfiling:function endProfiling(){if(!_isProfiling){return;}_isProfiling=false;resetMeasurements();ReactDebugTool.removeHook(ReactHostOperationHistoryHook);},getFlushHistory:function getFlushHistory(){return flushHistory;},onBeginFlush:function onBeginFlush(){currentFlushNesting++;resetMeasurements();pauseCurrentLifeCycleTimer();emitEvent('onBeginFlush');},onEndFlush:function onEndFlush(){resetMeasurements();currentFlushNesting--;resumeCurrentLifeCycleTimer();emitEvent('onEndFlush');},onBeginLifeCycleTimer:function onBeginLifeCycleTimer(debugID,timerType){checkDebugID(debugID);emitEvent('onBeginLifeCycleTimer',debugID,timerType);markBegin(debugID,timerType);beginLifeCycleTimer(debugID,timerType);},onEndLifeCycleTimer:function onEndLifeCycleTimer(debugID,timerType){checkDebugID(debugID);endLifeCycleTimer(debugID,timerType);markEnd(debugID,timerType);emitEvent('onEndLifeCycleTimer',debugID,timerType);},onBeginProcessingChildContext:function onBeginProcessingChildContext(){emitEvent('onBeginProcessingChildContext');},onEndProcessingChildContext:function onEndProcessingChildContext(){emitEvent('onEndProcessingChildContext');},onHostOperation:function onHostOperation(operation){checkDebugID(operation.instanceID);emitEvent('onHostOperation',operation);},onSetState:function onSetState(){emitEvent('onSetState');},onSetChildren:function onSetChildren(debugID,childDebugIDs){checkDebugID(debugID);childDebugIDs.forEach(checkDebugID);emitEvent('onSetChildren',debugID,childDebugIDs);},onBeforeMountComponent:function onBeforeMountComponent(debugID,element,parentDebugID){checkDebugID(debugID);checkDebugID(parentDebugID,true);emitEvent('onBeforeMountComponent',debugID,element,parentDebugID);markBegin(debugID,'mount');},onMountComponent:function onMountComponent(debugID){checkDebugID(debugID);markEnd(debugID,'mount');emitEvent('onMountComponent',debugID);},onBeforeUpdateComponent:function onBeforeUpdateComponent(debugID,element){checkDebugID(debugID);emitEvent('onBeforeUpdateComponent',debugID,element);markBegin(debugID,'update');},onUpdateComponent:function onUpdateComponent(debugID){checkDebugID(debugID);markEnd(debugID,'update');emitEvent('onUpdateComponent',debugID);},onBeforeUnmountComponent:function onBeforeUnmountComponent(debugID){checkDebugID(debugID);emitEvent('onBeforeUnmountComponent',debugID);markBegin(debugID,'unmount');},onUnmountComponent:function onUnmountComponent(debugID){checkDebugID(debugID);markEnd(debugID,'unmount');emitEvent('onUnmountComponent',debugID);},onTestEvent:function onTestEvent(){emitEvent('onTestEvent');}};// TODO remove these when RN/www gets updated
 	ReactDebugTool.addDevtool=ReactDebugTool.addHook;ReactDebugTool.removeDevtool=ReactDebugTool.removeHook;ReactDebugTool.addHook(ReactInvalidSetStateWarningHook);ReactDebugTool.addHook(ReactComponentTreeHook);var url=ExecutionEnvironment.canUseDOM&&window.location.href||'';if(/[?&]react_perf\b/.test(url)){ReactDebugTool.beginProfiling();}module.exports=ReactDebugTool;
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./~/process/browser.js */ 3)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./../../process/browser.js */ 3)))
 
 /***/ },
 /* 64 */
@@ -2969,7 +2969,7 @@
 	 *
 	 * 
 	 */'use strict';var warning=__webpack_require__(/*! fbjs/lib/warning */ 11);if(process.env.NODE_ENV!=='production'){var processingChildContext=false;var warnInvalidSetState=function warnInvalidSetState(){process.env.NODE_ENV!=='production'?warning(!processingChildContext,'setState(...): Cannot call setState() inside getChildContext()'):void 0;};}var ReactInvalidSetStateWarningHook={onBeginProcessingChildContext:function onBeginProcessingChildContext(){processingChildContext=true;},onEndProcessingChildContext:function onEndProcessingChildContext(){processingChildContext=false;},onSetState:function onSetState(){warnInvalidSetState();}};module.exports=ReactInvalidSetStateWarningHook;
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./~/process/browser.js */ 3)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./../../process/browser.js */ 3)))
 
 /***/ },
 /* 65 */
@@ -3159,7 +3159,7 @@
 	// wrappers but silence any exceptions from them to ensure that the
 	// first error is the one to bubble up.
 	try{this.closeAll(i+1);}catch(e){}}}}this.wrapperInitData.length=0;}};module.exports=TransactionImpl;
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./~/process/browser.js */ 3)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./../../process/browser.js */ 3)))
 
 /***/ },
 /* 69 */
@@ -3500,7 +3500,7 @@
 	   * @param {array<object>} updates List of update configurations.
 	   * @internal
 	   */processUpdates:function processUpdates(parentNode,updates){if(process.env.NODE_ENV!=='production'){var parentNodeDebugID=ReactDOMComponentTree.getInstanceFromNode(parentNode)._debugID;}for(var k=0;k<updates.length;k++){var update=updates[k];switch(update.type){case'INSERT_MARKUP':insertLazyTreeChildAt(parentNode,update.content,getNodeAfter(parentNode,update.afterNode));if(process.env.NODE_ENV!=='production'){ReactInstrumentation.debugTool.onHostOperation({instanceID:parentNodeDebugID,type:'insert child',payload:{toIndex:update.toIndex,content:update.content.toString()}});}break;case'MOVE_EXISTING':moveChild(parentNode,update.fromNode,getNodeAfter(parentNode,update.afterNode));if(process.env.NODE_ENV!=='production'){ReactInstrumentation.debugTool.onHostOperation({instanceID:parentNodeDebugID,type:'move child',payload:{fromIndex:update.fromIndex,toIndex:update.toIndex}});}break;case'SET_MARKUP':setInnerHTML(parentNode,update.content);if(process.env.NODE_ENV!=='production'){ReactInstrumentation.debugTool.onHostOperation({instanceID:parentNodeDebugID,type:'replace children',payload:update.content.toString()});}break;case'TEXT_CONTENT':setTextContent(parentNode,update.content);if(process.env.NODE_ENV!=='production'){ReactInstrumentation.debugTool.onHostOperation({instanceID:parentNodeDebugID,type:'replace text',payload:update.content.toString()});}break;case'REMOVE_NODE':removeChild(parentNode,update.fromNode);if(process.env.NODE_ENV!=='production'){ReactInstrumentation.debugTool.onHostOperation({instanceID:parentNodeDebugID,type:'remove child',payload:{fromIndex:update.fromIndex}});}break;}}}};module.exports=DOMChildrenOperations;
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./~/process/browser.js */ 3)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./../../process/browser.js */ 3)))
 
 /***/ },
 /* 81 */
@@ -3737,7 +3737,7 @@
 	   * @param {string} markup Markup to render in place of the child node.
 	   * @internal
 	   */dangerouslyReplaceNodeWithMarkup:function dangerouslyReplaceNodeWithMarkup(oldChild,markup){!ExecutionEnvironment.canUseDOM?process.env.NODE_ENV!=='production'?invariant(false,'dangerouslyReplaceNodeWithMarkup(...): Cannot render markup in a worker thread. Make sure `window` and `document` are available globally before requiring React when unit testing or use ReactDOMServer.renderToString() for server rendering.'):_prodInvariant('56'):void 0;!markup?process.env.NODE_ENV!=='production'?invariant(false,'dangerouslyReplaceNodeWithMarkup(...): Missing markup.'):_prodInvariant('57'):void 0;!(oldChild.nodeName!=='HTML')?process.env.NODE_ENV!=='production'?invariant(false,'dangerouslyReplaceNodeWithMarkup(...): Cannot replace markup of the <html> node. This is because browser quirks make this unreliable and/or slow. If you want to render to the root you must use server rendering. See ReactDOMServer.renderToString().'):_prodInvariant('58'):void 0;if(typeof markup==='string'){var newChild=createNodesFromMarkup(markup,emptyFunction)[0];oldChild.parentNode.replaceChild(newChild,oldChild);}else{DOMLazyTree.replaceChildWithTree(oldChild,markup);}}};module.exports=Danger;
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./~/process/browser.js */ 3)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./../../process/browser.js */ 3)))
 
 /***/ },
 /* 88 */
@@ -3774,7 +3774,7 @@
 	 * @param {?function} handleScript Invoked once for each rendered <script>.
 	 * @return {array<DOMElement|DOMTextNode>} An array of rendered nodes.
 	 */function createNodesFromMarkup(markup,handleScript){var node=dummyNode;!!!dummyNode?process.env.NODE_ENV!=='production'?invariant(false,'createNodesFromMarkup dummy not initialized'):invariant(false):void 0;var nodeName=getNodeName(markup);var wrap=nodeName&&getMarkupWrap(nodeName);if(wrap){node.innerHTML=wrap[1]+markup+wrap[2];var wrapDepth=wrap[0];while(wrapDepth--){node=node.lastChild;}}else{node.innerHTML=markup;}var scripts=node.getElementsByTagName('script');if(scripts.length){!handleScript?process.env.NODE_ENV!=='production'?invariant(false,'createNodesFromMarkup(...): Unexpected <script> element rendered.'):invariant(false):void 0;createArrayFromMixed(scripts).forEach(handleScript);}var nodes=Array.from(node.childNodes);while(node.lastChild){node.removeChild(node.lastChild);}return nodes;}module.exports=createNodesFromMarkup;
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./~/process/browser.js */ 3)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./../../process/browser.js */ 3)))
 
 /***/ },
 /* 89 */
@@ -3852,7 +3852,7 @@
 	 * @param {*} obj
 	 * @return {array}
 	 */function createArrayFromMixed(obj){if(!hasArrayNature(obj)){return[obj];}else if(Array.isArray(obj)){return obj.slice();}else{return toArray(obj);}}module.exports=createArrayFromMixed;
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./~/process/browser.js */ 3)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./../../process/browser.js */ 3)))
 
 /***/ },
 /* 90 */
@@ -3887,7 +3887,7 @@
 	 * @param {string} nodeName Lowercase `nodeName`.
 	 * @return {?array} Markup wrap configuration, if applicable.
 	 */function getMarkupWrap(nodeName){!!!dummyNode?process.env.NODE_ENV!=='production'?invariant(false,'Markup wrapping node not initialized'):invariant(false):void 0;if(!markupWrap.hasOwnProperty(nodeName)){nodeName='*';}if(!shouldWrap.hasOwnProperty(nodeName)){if(nodeName==='*'){dummyNode.innerHTML='<link />';}else{dummyNode.innerHTML='<'+nodeName+'></'+nodeName+'>';}shouldWrap[nodeName]=!dummyNode.firstChild;}return shouldWrap[nodeName]?markupWrap[nodeName]:null;}module.exports=getMarkupWrap;
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./~/process/browser.js */ 3)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./../../process/browser.js */ 3)))
 
 /***/ },
 /* 91 */
@@ -4088,7 +4088,7 @@
 	         * take advantage of React's reconciliation for styling and <title>
 	         * management. So we just document it and throw in dangerous cases.
 	         */ true?process.env.NODE_ENV!=='production'?invariant(false,'<%s> tried to unmount. Because of cross-browser quirks it is impossible to unmount some top-level components (eg <html>, <head>, and <body>) reliably and efficiently. To fix this, have a single top-level component that never unmounts render these elements.',this._tag):_prodInvariant('66',this._tag):void 0;break;}this.unmountChildren(safely);ReactDOMComponentTree.uncacheNode(this);EventPluginHub.deleteAllListeners(this);this._rootNodeID=0;this._domID=0;this._wrapperState=null;if(process.env.NODE_ENV!=='production'){setAndValidateContentChildDev.call(this,null);}},getPublicInstance:function getPublicInstance(){return getNode(this);}};_assign(ReactDOMComponent.prototype,ReactDOMComponent.Mixin,ReactMultiChild.Mixin);module.exports=ReactDOMComponent;
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./~/process/browser.js */ 3)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./../../process/browser.js */ 3)))
 
 /***/ },
 /* 93 */
@@ -4176,7 +4176,7 @@
 	   */setValueForStyles:function setValueForStyles(node,styles,component){if(process.env.NODE_ENV!=='production'){ReactInstrumentation.debugTool.onHostOperation({instanceID:component._debugID,type:'update styles',payload:styles});}var style=node.style;for(var styleName in styles){if(!styles.hasOwnProperty(styleName)){continue;}if(process.env.NODE_ENV!=='production'){warnValidStyle(styleName,styles[styleName],component);}var styleValue=dangerousStyleValue(styleName,styles[styleName],component);if(styleName==='float'||styleName==='cssFloat'){styleName=styleFloatAccessor;}if(styleValue){style[styleName]=styleValue;}else{var expansion=hasShorthandPropertyBug&&CSSProperty.shorthandPropertyExpansions[styleName];if(expansion){// Shorthand property that IE8 won't like unsetting, so unset each
 	// component to placate it
 	for(var individualStyleName in expansion){style[individualStyleName]='';}}else{style[styleName]='';}}}}};module.exports=CSSPropertyOperations;
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./~/process/browser.js */ 3)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./../../process/browser.js */ 3)))
 
 /***/ },
 /* 96 */
@@ -4313,7 +4313,7 @@
 	}if(typeof value==='string'){if(process.env.NODE_ENV!=='production'){// Allow '0' to pass through without warning. 0 is already special and
 	// doesn't require units, so we don't need to warn about it.
 	if(component&&value!=='0'){var owner=component._currentElement._owner;var ownerName=owner?owner.getName():null;if(ownerName&&!styleWarnings[ownerName]){styleWarnings[ownerName]={};}var warned=false;if(ownerName){var warnings=styleWarnings[ownerName];warned=warnings[name];if(!warned){warnings[name]=true;}}if(!warned){process.env.NODE_ENV!=='production'?warning(false,'a `%s` tag (owner: `%s`) was passed a numeric string value '+'for CSS property `%s` (value: `%s`) which will be treated '+'as a unitless number in a future version of React.',component._currentElement.type,ownerName||'unknown',name,value):void 0;}}}value=value.trim();}return value+'px';}module.exports=dangerousStyleValue;
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./~/process/browser.js */ 3)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./../../process/browser.js */ 3)))
 
 /***/ },
 /* 100 */
@@ -4453,7 +4453,7 @@
 	   * @param {DOMElement} node
 	   * @param {string} name
 	   */deleteValueForProperty:function deleteValueForProperty(node,name){var propertyInfo=DOMProperty.properties.hasOwnProperty(name)?DOMProperty.properties[name]:null;if(propertyInfo){var mutationMethod=propertyInfo.mutationMethod;if(mutationMethod){mutationMethod(node,undefined);}else if(propertyInfo.mustUseProperty){var propName=propertyInfo.propertyName;if(propertyInfo.hasBooleanValue){node[propName]=false;}else{node[propName]='';}}else{node.removeAttribute(propertyInfo.attributeName);}}else if(DOMProperty.isCustomAttribute(name)){node.removeAttribute(name);}if(process.env.NODE_ENV!=='production'){ReactInstrumentation.debugTool.onHostOperation({instanceID:ReactDOMComponentTree.getInstanceFromNode(node)._debugID,type:'remove attribute',payload:name});}}};module.exports=DOMPropertyOperations;
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./~/process/browser.js */ 3)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./../../process/browser.js */ 3)))
 
 /***/ },
 /* 104 */
@@ -4745,7 +4745,7 @@
 	// was previously checked to update will cause it to be come re-checked
 	// as appropriate.
 	ReactUpdates.asap(forceUpdateIfMounted,otherInstance);}}return returnValue;}module.exports=ReactDOMInput;
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./~/process/browser.js */ 3)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./../../process/browser.js */ 3)))
 
 /***/ },
 /* 109 */
@@ -4778,7 +4778,7 @@
 	   * @param {object} inputProps Props for form component
 	   * @param {SyntheticEvent} event change event to handle
 	   */executeOnChange:function executeOnChange(inputProps,event){if(inputProps.valueLink){_assertValueLink(inputProps);return inputProps.valueLink.requestChange(event.target.value);}else if(inputProps.checkedLink){_assertCheckedLink(inputProps);return inputProps.checkedLink.requestChange(event.target.checked);}else if(inputProps.onChange){return inputProps.onChange.call(undefined,event);}}};module.exports=LinkedValueUtils;
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./~/process/browser.js */ 3)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./../../process/browser.js */ 3)))
 
 /***/ },
 /* 110 */
@@ -4826,7 +4826,7 @@
 	var props=inst._currentElement.props;if(props.value!=null){var node=ReactDOMComponentTree.getNodeFromInstance(inst);node.setAttribute('value',props.value);}},getHostProps:function getHostProps(inst,props){var hostProps=_assign({selected:undefined,children:undefined},props);// Read state only from initial mount because <select> updates value
 	// manually; we need the initial state only for server rendering
 	if(inst._wrapperState.selected!=null){hostProps.selected=inst._wrapperState.selected;}var content=flattenChildren(props.children);if(content){hostProps.children=content;}return hostProps;}};module.exports=ReactDOMOption;
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./~/process/browser.js */ 3)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./../../process/browser.js */ 3)))
 
 /***/ },
 /* 112 */
@@ -4874,7 +4874,7 @@
 	inst._wrapperState.initialValue=undefined;var wasMultiple=inst._wrapperState.wasMultiple;inst._wrapperState.wasMultiple=Boolean(props.multiple);var value=LinkedValueUtils.getValue(props);if(value!=null){inst._wrapperState.pendingUpdate=false;updateOptions(inst,Boolean(props.multiple),value);}else if(wasMultiple!==Boolean(props.multiple)){// For simplicity, reapply `defaultValue` if `multiple` is toggled.
 	if(props.defaultValue!=null){updateOptions(inst,Boolean(props.multiple),props.defaultValue);}else{// Revert the select back to its default unselected state.
 	updateOptions(inst,Boolean(props.multiple),props.multiple?[]:'');}}}};function _handleChange(event){var props=this._currentElement.props;var returnValue=LinkedValueUtils.executeOnChange(props,event);if(this._rootNodeID){this._wrapperState.pendingUpdate=true;}ReactUpdates.asap(updateOptionsIfPendingUpdateAndMounted,this);return returnValue;}module.exports=ReactDOMSelect;
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./~/process/browser.js */ 3)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./../../process/browser.js */ 3)))
 
 /***/ },
 /* 113 */
@@ -4921,7 +4921,7 @@
 	var node=ReactDOMComponentTree.getNodeFromInstance(inst);// Warning: node.value may be the empty string at this point (IE11) if placeholder is set.
 	node.value=node.textContent;// Detach value from defaultValue
 	}};function _handleChange(event){var props=this._currentElement.props;var returnValue=LinkedValueUtils.executeOnChange(props,event);ReactUpdates.asap(forceUpdateIfMounted,this);return returnValue;}module.exports=ReactDOMTextarea;
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./~/process/browser.js */ 3)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./../../process/browser.js */ 3)))
 
 /***/ },
 /* 114 */
@@ -5075,7 +5075,7 @@
 	     * @param {ReactComponent} child Component to unmount.
 	     * @private
 	     */_unmountChild:function _unmountChild(child,node){var update=this.removeChild(child,node);child._mountIndex=null;return update;}}};module.exports=ReactMultiChild;
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./~/process/browser.js */ 3)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./../../process/browser.js */ 3)))
 
 /***/ },
 /* 115 */
@@ -5100,7 +5100,7 @@
 	   * Optionally injectable hook for processing a queue of child updates. Will
 	   * later move into MultiChildComponents.
 	   */processChildrenUpdates:null,injection:{injectEnvironment:function injectEnvironment(environment){!!injected?process.env.NODE_ENV!=='production'?invariant(false,'ReactCompositeComponent: injectEnvironment() can only be called once.'):_prodInvariant('104'):void 0;ReactComponentEnvironment.replaceNodeWithMarkup=environment.replaceNodeWithMarkup;ReactComponentEnvironment.processChildrenUpdates=environment.processChildrenUpdates;injected=true;}}};module.exports=ReactComponentEnvironment;
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./~/process/browser.js */ 3)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./../../process/browser.js */ 3)))
 
 /***/ },
 /* 116 */
@@ -5188,7 +5188,7 @@
 	   * @param {?object} renderedChildren Previously initialized set of children.
 	   * @internal
 	   */unmountChildren:function unmountChildren(renderedChildren,safely){for(var name in renderedChildren){if(renderedChildren.hasOwnProperty(name)){var renderedChild=renderedChildren[name];ReactReconciler.unmountComponent(renderedChild,safely);}}}};module.exports=ReactChildReconciler;
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./~/process/browser.js */ 3)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./../../process/browser.js */ 3)))
 
 /***/ },
 /* 118 */
@@ -5230,7 +5230,7 @@
 	instance._mountIndex=0;instance._mountImage=null;if(process.env.NODE_ENV!=='production'){instance._debugID=shouldHaveDebugID?getNextDebugID():0;}// Internal instances should fully constructed at this point, so they should
 	// not get any new fields added to them at this point.
 	if(process.env.NODE_ENV!=='production'){if(Object.preventExtensions){Object.preventExtensions(instance);}}return instance;}module.exports=instantiateReactComponent;
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./~/process/browser.js */ 3)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./../../process/browser.js */ 3)))
 
 /***/ },
 /* 119 */
@@ -5446,7 +5446,7 @@
 	   * @internal
 	   */getPublicInstance:function getPublicInstance(){var inst=this._instance;if(this._compositeType===CompositeTypes.StatelessFunctional){return null;}return inst;},// Stub
 	_instantiateReactComponent:null};module.exports=ReactCompositeComponent;
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./~/process/browser.js */ 3)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./../../process/browser.js */ 3)))
 
 /***/ },
 /* 120 */
@@ -5465,7 +5465,7 @@
 	 *
 	 * 
 	 */'use strict';var _prodInvariant=__webpack_require__(/*! ./reactProdInvariant */ 35);var React=__webpack_require__(/*! react/lib/React */ 2);var invariant=__webpack_require__(/*! fbjs/lib/invariant */ 8);var ReactNodeTypes={HOST:0,COMPOSITE:1,EMPTY:2,getType:function getType(node){if(node===null||node===false){return ReactNodeTypes.EMPTY;}else if(React.isValidElement(node)){if(typeof node.type==='function'){return ReactNodeTypes.COMPOSITE;}else{return ReactNodeTypes.HOST;}} true?process.env.NODE_ENV!=='production'?invariant(false,'Unexpected node: %s',node):_prodInvariant('26',node):void 0;}};module.exports=ReactNodeTypes;
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./~/process/browser.js */ 3)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./../../process/browser.js */ 3)))
 
 /***/ },
 /* 121 */
@@ -5506,7 +5506,7 @@
 	!(typeof typeSpecs[typeSpecName]==='function')?process.env.NODE_ENV!=='production'?invariant(false,'%s: %s type `%s` is invalid; it must be a function, usually from React.PropTypes.',componentName||'React class',ReactPropTypeLocationNames[location],typeSpecName):_prodInvariant('84',componentName||'React class',ReactPropTypeLocationNames[location],typeSpecName):void 0;error=typeSpecs[typeSpecName](values,typeSpecName,componentName,location,null,ReactPropTypesSecret);}catch(ex){error=ex;}process.env.NODE_ENV!=='production'?warning(!error||error instanceof Error,'%s: type specification of %s `%s` is invalid; the type checker '+'function must return `null` or an `Error` but returned a %s. '+'You may have forgotten to pass an argument to the type checker '+'creator (arrayOf, instanceOf, objectOf, oneOf, oneOfType, and '+'shape all require an argument).',componentName||'React class',ReactPropTypeLocationNames[location],typeSpecName,typeof error==='undefined'?'undefined':_typeof(error)):void 0;if(error instanceof Error&&!(error.message in loggedTypeFailures)){// Only monitor this failure once because there tends to be a lot of the
 	// same error.
 	loggedTypeFailures[error.message]=true;var componentStackInfo='';if(process.env.NODE_ENV!=='production'){if(!ReactComponentTreeHook){ReactComponentTreeHook=__webpack_require__(/*! react/lib/ReactComponentTreeHook */ 26);}if(debugID!==null){componentStackInfo=ReactComponentTreeHook.getStackAddendumByID(debugID);}else if(element!==null){componentStackInfo=ReactComponentTreeHook.getCurrentStackAddendum(element);}}process.env.NODE_ENV!=='production'?warning(false,'Failed %s type: %s%s',location,error.message,componentStackInfo):void 0;}}}}module.exports=checkReactTypeSpec;
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./~/process/browser.js */ 3)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./../../process/browser.js */ 3)))
 
 /***/ },
 /* 122 */
@@ -5525,7 +5525,7 @@
 	 *
 	 * 
 	 */'use strict';var ReactPropTypeLocationNames={};if(process.env.NODE_ENV!=='production'){ReactPropTypeLocationNames={prop:'prop',context:'context',childContext:'child context'};}module.exports=ReactPropTypeLocationNames;
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./~/process/browser.js */ 3)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./../../process/browser.js */ 3)))
 
 /***/ },
 /* 123 */
@@ -5637,7 +5637,7 @@
 	 * @param {ReactComponent} component
 	 * @return {boolean}
 	 */function isTextComponent(component){return component instanceof textComponentClass;}var ReactHostComponent={createInternalComponent:createInternalComponent,createInstanceForText:createInstanceForText,isTextComponent:isTextComponent,injection:ReactHostComponentInjection};module.exports=ReactHostComponent;
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./~/process/browser.js */ 3)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./../../process/browser.js */ 3)))
 
 /***/ },
 /* 127 */
@@ -5747,7 +5747,7 @@
 	 * @param {?*} traverseContext Context for traversal.
 	 * @return {!number} The number of children in this subtree.
 	 */function traverseAllChildren(children,callback,traverseContext){if(children==null){return 0;}return traverseAllChildrenImpl(children,'',callback,traverseContext);}module.exports=traverseAllChildren;
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./~/process/browser.js */ 3)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./../../process/browser.js */ 3)))
 
 /***/ },
 /* 130 */
@@ -5833,7 +5833,7 @@
 	 * children will not be included in the resulting object.
 	 * @return {!object} flattened children keyed by name.
 	 */function flattenChildren(children,selfDebugID){if(children==null){return children;}var result={};if(process.env.NODE_ENV!=='production'){traverseAllChildren(children,function(traverseContext,child,name){return flattenSingleChildIntoContext(traverseContext,child,name,selfDebugID);},result);}else{traverseAllChildren(children,flattenSingleChildIntoContext,result);}return result;}module.exports=flattenChildren;
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./~/process/browser.js */ 3)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./../../process/browser.js */ 3)))
 
 /***/ },
 /* 133 */
@@ -5870,7 +5870,7 @@
 	   * `PooledClass` looks for this, and will invoke this before allowing this
 	   * instance to be reused.
 	   */destructor:function destructor(){},checkpoint:function checkpoint(){},rollback:function rollback(){}};_assign(ReactServerRenderingTransaction.prototype,Transaction,Mixin);PooledClass.addPoolingTo(ReactServerRenderingTransaction);module.exports=ReactServerRenderingTransaction;
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./~/process/browser.js */ 3)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./../../process/browser.js */ 3)))
 
 /***/ },
 /* 134 */
@@ -5939,7 +5939,7 @@
 	   * @param {object|function} partialState Next partial state to be merged with state.
 	   * @internal
 	   */ReactServerUpdateQueue.prototype.enqueueSetState=function enqueueSetState(publicInstance,partialState){if(this.transaction.isInTransaction()){ReactUpdateQueue.enqueueSetState(publicInstance,partialState);}else{warnNoop(publicInstance,'setState');}};return ReactServerUpdateQueue;}();module.exports=ReactServerUpdateQueue;
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./~/process/browser.js */ 3)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./../../process/browser.js */ 3)))
 
 /***/ },
 /* 135 */
@@ -6021,7 +6021,7 @@
 	   * @internal
 	   */enqueueSetState:function enqueueSetState(publicInstance,partialState){if(process.env.NODE_ENV!=='production'){ReactInstrumentation.debugTool.onSetState();process.env.NODE_ENV!=='production'?warning(partialState!=null,'setState(...): You passed an undefined or null state object; '+'instead, use forceUpdate().'):void 0;}var internalInstance=getInternalInstanceReadyForUpdate(publicInstance,'setState');if(!internalInstance){return;}var queue=internalInstance._pendingStateQueue||(internalInstance._pendingStateQueue=[]);queue.push(partialState);enqueueUpdate(internalInstance);},enqueueElementInternal:function enqueueElementInternal(internalInstance,nextElement,nextContext){internalInstance._pendingElement=nextElement;// TODO: introduce _pendingContext instead of setting it directly.
 	internalInstance._context=nextContext;enqueueUpdate(internalInstance);},validateCallback:function validateCallback(callback,callerName){!(!callback||typeof callback==='function')?process.env.NODE_ENV!=='production'?invariant(false,'%s(...): Expected the last optional `callback` argument to be a function. Instead received: %s.',callerName,formatUnexpectedArgument(callback)):_prodInvariant('122',callerName,formatUnexpectedArgument(callback)):void 0;}};module.exports=ReactUpdateQueue;
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./~/process/browser.js */ 3)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./../../process/browser.js */ 3)))
 
 /***/ },
 /* 136 */
@@ -6092,7 +6092,7 @@
 	deepestCommon!==-1?childOwners[deepestCommon].getName()||UNKNOWN:[],ancestorOwnerNames,ancestorTag,// If we're warning about an invalid (non-parent) ancestry, add '...'
 	invalidAncestor?['...']:[],childOwnerNames,childTag).join(' > ');var warnKey=!!invalidParent+'|'+childTag+'|'+ancestorTag+'|'+ownerInfo;if(didWarn[warnKey]){return;}didWarn[warnKey]=true;var tagDisplayName=childTag;var whitespaceInfo='';if(childTag==='#text'){if(/\S/.test(childText)){tagDisplayName='Text nodes';}else{tagDisplayName='Whitespace text nodes';whitespaceInfo=' Make sure you don\'t have any extra whitespace between tags on '+'each line of your source code.';}}else{tagDisplayName='<'+childTag+'>';}if(invalidParent){var info='';if(ancestorTag==='table'&&childTag==='tr'){info+=' Add a <tbody> to your code to match the DOM tree generated by '+'the browser.';}process.env.NODE_ENV!=='production'?warning(false,'validateDOMNesting(...): %s cannot appear as a child of <%s>.%s '+'See %s.%s',tagDisplayName,ancestorTag,whitespaceInfo,ownerInfo,info):void 0;}else{process.env.NODE_ENV!=='production'?warning(false,'validateDOMNesting(...): %s cannot appear as a descendant of '+'<%s>. See %s.',tagDisplayName,ancestorTag,ownerInfo):void 0;}}};validateDOMNesting.updatedAncestorInfo=updatedAncestorInfo;// For testing
 	validateDOMNesting.isTagValidInContext=function(tag,ancestorInfo){ancestorInfo=ancestorInfo||emptyAncestorInfo;var parentInfo=ancestorInfo.current;var parentTag=parentInfo&&parentInfo.tag;return isTagValidWithParent(tag,parentTag)&&!findInvalidAncestorForTag(tag,ancestorInfo);};}module.exports=validateDOMNesting;
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./~/process/browser.js */ 3)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./../../process/browser.js */ 3)))
 
 /***/ },
 /* 137 */
@@ -6150,7 +6150,7 @@
 	 * Does not invoke the callback on the nearest common ancestor because nothing
 	 * "entered" or "left" that element.
 	 */function traverseEnterLeave(from,to,fn,argFrom,argTo){var common=from&&to?getLowestCommonAncestor(from,to):null;var pathFrom=[];while(from&&from!==common){pathFrom.push(from);from=from._hostParent;}var pathTo=[];while(to&&to!==common){pathTo.push(to);to=to._hostParent;}var i;for(i=0;i<pathFrom.length;i++){fn(pathFrom[i],'bubbled',argFrom);}for(i=pathTo.length;i-->0;){fn(pathTo[i],'captured',argTo);}}module.exports={isAncestor:isAncestor,getLowestCommonAncestor:getLowestCommonAncestor,getParentInstance:getParentInstance,traverseTwoPhase:traverseTwoPhase,traverseEnterLeave:traverseEnterLeave};
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./~/process/browser.js */ 3)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./../../process/browser.js */ 3)))
 
 /***/ },
 /* 139 */
@@ -6206,7 +6206,7 @@
 	// and/or updateComponent to do the actual update for consistency with
 	// other component types?
 	this._stringText=nextStringText;var commentNodes=this.getHostNode();DOMChildrenOperations.replaceDelimitedText(commentNodes[0],commentNodes[1],nextStringText);}}},getHostNode:function getHostNode(){var hostNode=this._commentNodes;if(hostNode){return hostNode;}if(!this._closingComment){var openingComment=ReactDOMComponentTree.getNodeFromInstance(this);var node=openingComment.nextSibling;while(true){!(node!=null)?process.env.NODE_ENV!=='production'?invariant(false,'Missing closing comment for text component %s',this._domID):_prodInvariant('67',this._domID):void 0;if(node.nodeType===8&&node.nodeValue===' /react-text '){this._closingComment=node;break;}node=node.nextSibling;}}hostNode=[this._hostNode,this._closingComment];this._commentNodes=hostNode;return hostNode;},unmountComponent:function unmountComponent(){this._closingComment=null;this._commentNodes=null;ReactDOMComponentTree.uncacheNode(this);}});module.exports=ReactDOMTextComponent;
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./~/process/browser.js */ 3)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./../../process/browser.js */ 3)))
 
 /***/ },
 /* 140 */
@@ -6319,7 +6319,7 @@
 	   * @param {function} callback Callback function.
 	   * @return {object} Object with a `remove` method.
 	   */capture:function capture(target,eventType,callback){if(target.addEventListener){target.addEventListener(eventType,callback,true);return{remove:function remove(){target.removeEventListener(eventType,callback,true);}};}else{if(process.env.NODE_ENV!=='production'){console.error('Attempted to listen to events during the capture phase on a '+'browser that does not support the capture phase. Your application '+'will not receive some events.');}return{remove:emptyFunction};}},registerDefault:function registerDefault(){}};module.exports=EventListener;
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./~/process/browser.js */ 3)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./../../process/browser.js */ 3)))
 
 /***/ },
 /* 143 */
@@ -6445,7 +6445,7 @@
 	   * `PooledClass` looks for this, and will invoke this before allowing this
 	   * instance to be reused.
 	   */destructor:function destructor(){CallbackQueue.release(this.reactMountReady);this.reactMountReady=null;}};_assign(ReactReconcileTransaction.prototype,Transaction,Mixin);PooledClass.addPoolingTo(ReactReconcileTransaction);module.exports=ReactReconcileTransaction;
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./~/process/browser.js */ 3)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./../../process/browser.js */ 3)))
 
 /***/ },
 /* 146 */
@@ -6824,7 +6824,7 @@
 	// listener on the target node.
 	// http://www.quirksmode.org/blog/archives/2010/09/click_event_del.html
 	if(registrationName==='onClick'&&!isInteractive(inst._tag)){var key=getDictionaryKey(inst);var node=ReactDOMComponentTree.getNodeFromInstance(inst);if(!onClickListeners[key]){onClickListeners[key]=EventListener.listen(node,'click',emptyFunction);}}},willDeleteListener:function willDeleteListener(inst,registrationName){if(registrationName==='onClick'&&!isInteractive(inst._tag)){var key=getDictionaryKey(inst);onClickListeners[key].remove();delete onClickListeners[key];}}};module.exports=SimpleEventPlugin;
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./~/process/browser.js */ 3)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./../../process/browser.js */ 3)))
 
 /***/ },
 /* 156 */
@@ -7284,7 +7284,7 @@
 	// insert markup into a <div> or <iframe> depending on the container
 	// type to perform the same normalizations before comparing.
 	var normalizer;if(container.nodeType===ELEMENT_NODE_TYPE){normalizer=document.createElement('div');normalizer.innerHTML=markup;normalizedMarkup=normalizer.innerHTML;}else{normalizer=document.createElement('iframe');document.body.appendChild(normalizer);normalizer.contentDocument.write(markup);normalizedMarkup=normalizer.contentDocument.documentElement.outerHTML;document.body.removeChild(normalizer);}}var diffIndex=firstDifferenceIndex(normalizedMarkup,rootMarkup);var difference=' (client) '+normalizedMarkup.substring(diffIndex-20,diffIndex+20)+'\n (server) '+rootMarkup.substring(diffIndex-20,diffIndex+20);!(container.nodeType!==DOC_NODE_TYPE)?process.env.NODE_ENV!=='production'?invariant(false,'You\'re trying to render a component to the document using server rendering but the checksum was invalid. This usually means you rendered a different component type or props on the client from the one on the server, or your render() methods are impure. React cannot handle this case due to cross-browser quirks by rendering at the document root. You should look for environment dependent code in your components and ensure the props are the same client and server side:\n%s',difference):_prodInvariant('42',difference):void 0;if(process.env.NODE_ENV!=='production'){process.env.NODE_ENV!=='production'?warning(false,'React attempted to reuse markup in a container but the '+'checksum was invalid. This generally means that you are '+'using server rendering and the markup generated on the '+'server was not what the client was expecting. React injected '+'new markup to compensate which works but you have lost many '+'of the benefits of server rendering. Instead, figure out '+'why the markup being generated is different on the client '+'or server:\n%s',difference):void 0;}}}!(container.nodeType!==DOC_NODE_TYPE)?process.env.NODE_ENV!=='production'?invariant(false,'You\'re trying to render a component to the document but you didn\'t use server rendering. We can\'t do this without using server rendering due to cross-browser quirks. See ReactDOMServer.renderToString() for server rendering.'):_prodInvariant('43'):void 0;if(transaction.useCreateElement){while(container.lastChild){container.removeChild(container.lastChild);}DOMLazyTree.insertTreeBefore(container,markup,null);}else{setInnerHTML(container,markup);ReactDOMComponentTree.precacheNode(instance,container.firstChild);}if(process.env.NODE_ENV!=='production'){var hostNode=ReactDOMComponentTree.getInstanceFromNode(container.firstChild);if(hostNode._debugID!==0){ReactInstrumentation.debugTool.onHostOperation({instanceID:hostNode._debugID,type:'mount',payload:markup.toString()});}}}};module.exports=ReactMount;
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./~/process/browser.js */ 3)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./../../process/browser.js */ 3)))
 
 /***/ },
 /* 167 */
@@ -7302,7 +7302,7 @@
 	 * of patent rights can be found in the PATENTS file in the same directory.
 	 *
 	 */'use strict';var validateDOMNesting=__webpack_require__(/*! ./validateDOMNesting */ 136);var DOC_NODE_TYPE=9;function ReactDOMContainerInfo(topLevelWrapper,node){var info={_topLevelWrapper:topLevelWrapper,_idCounter:1,_ownerDocument:node?node.nodeType===DOC_NODE_TYPE?node:node.ownerDocument:null,_node:node,_tag:node?node.nodeName.toLowerCase():null,_namespaceURI:node?node.namespaceURI:null};if(process.env.NODE_ENV!=='production'){info._ancestorInfo=node?validateDOMNesting.updatedAncestorInfo(null,info._tag,null):null;}return info;}module.exports=ReactDOMContainerInfo;
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./~/process/browser.js */ 3)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./../../process/browser.js */ 3)))
 
 /***/ },
 /* 168 */
@@ -7409,7 +7409,7 @@
 	 * @param {ReactComponent|DOMElement} componentOrElement
 	 * @return {?DOMElement} The root node of this element.
 	 */function findDOMNode(componentOrElement){if(process.env.NODE_ENV!=='production'){var owner=ReactCurrentOwner.current;if(owner!==null){process.env.NODE_ENV!=='production'?warning(owner._warnedAboutRefsInRender,'%s is accessing findDOMNode inside its render(). '+'render() should be a pure function of props and state. It should '+'never access something that requires stale data from the previous '+'render, such as refs. Move this logic to componentDidMount and '+'componentDidUpdate instead.',owner.getName()||'A component'):void 0;owner._warnedAboutRefsInRender=true;}}if(componentOrElement==null){return null;}if(componentOrElement.nodeType===1){return componentOrElement;}var inst=ReactInstanceMap.get(componentOrElement);if(inst){inst=getHostComponentFromComposite(inst);return inst?ReactDOMComponentTree.getNodeFromInstance(inst):null;}if(typeof componentOrElement.render==='function'){ true?process.env.NODE_ENV!=='production'?invariant(false,'findDOMNode was called on an unmounted component.'):_prodInvariant('44'):void 0;}else{ true?process.env.NODE_ENV!=='production'?invariant(false,'Element appears to be neither ReactComponent nor DOMNode (keys: %s)',Object.keys(componentOrElement)):_prodInvariant('45',Object.keys(componentOrElement)):void 0;}}module.exports=findDOMNode;
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./~/process/browser.js */ 3)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./../../process/browser.js */ 3)))
 
 /***/ },
 /* 173 */
@@ -7466,7 +7466,7 @@
 	// Components should be careful to only render valid props/attributes.
 	// Warning will be invoked in warnUnknownProperties to allow grouping.
 	return false;}};}var warnUnknownProperties=function warnUnknownProperties(debugID,element){var unknownProps=[];for(var key in element.props){var isValid=validateProperty(element.type,key,debugID);if(!isValid){unknownProps.push(key);}}var unknownPropString=unknownProps.map(function(prop){return'`'+prop+'`';}).join(', ');if(unknownProps.length===1){process.env.NODE_ENV!=='production'?warning(false,'Unknown prop %s on <%s> tag. Remove this prop from the element. '+'For details, see https://fb.me/react-unknown-prop%s',unknownPropString,element.type,ReactComponentTreeHook.getStackAddendumByID(debugID)):void 0;}else if(unknownProps.length>1){process.env.NODE_ENV!=='production'?warning(false,'Unknown props %s on <%s> tag. Remove these props from the element. '+'For details, see https://fb.me/react-unknown-prop%s',unknownPropString,element.type,ReactComponentTreeHook.getStackAddendumByID(debugID)):void 0;}};function handleElement(debugID,element){if(element==null||typeof element.type!=='string'){return;}if(element.type.indexOf('-')>=0||element.props.is){return;}warnUnknownProperties(debugID,element);}var ReactDOMUnknownPropertyHook={onBeforeMountComponent:function onBeforeMountComponent(debugID,element){handleElement(debugID,element);},onBeforeUpdateComponent:function onBeforeUpdateComponent(debugID,element){handleElement(debugID,element);}};module.exports=ReactDOMUnknownPropertyHook;
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./~/process/browser.js */ 3)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./../../process/browser.js */ 3)))
 
 /***/ },
 /* 176 */
@@ -7484,7 +7484,7 @@
 	 * of patent rights can be found in the PATENTS file in the same directory.
 	 *
 	 */'use strict';var ReactComponentTreeHook=__webpack_require__(/*! react/lib/ReactComponentTreeHook */ 26);var warning=__webpack_require__(/*! fbjs/lib/warning */ 11);var didWarnValueNull=false;function handleElement(debugID,element){if(element==null){return;}if(element.type!=='input'&&element.type!=='textarea'&&element.type!=='select'){return;}if(element.props!=null&&element.props.value===null&&!didWarnValueNull){process.env.NODE_ENV!=='production'?warning(false,'`value` prop on `%s` should not be null. '+'Consider using the empty string to clear the component or `undefined` '+'for uncontrolled components.%s',element.type,ReactComponentTreeHook.getStackAddendumByID(debugID)):void 0;didWarnValueNull=true;}}var ReactDOMNullInputValuePropHook={onBeforeMountComponent:function onBeforeMountComponent(debugID,element){handleElement(debugID,element);},onBeforeUpdateComponent:function onBeforeUpdateComponent(debugID,element){handleElement(debugID,element);}};module.exports=ReactDOMNullInputValuePropHook;
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./~/process/browser.js */ 3)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./../../process/browser.js */ 3)))
 
 /***/ },
 /* 177 */
@@ -7505,7 +7505,7 @@
 	// DOM properties, then it is an invalid aria-* attribute.
 	if(standardName==null){warnedProperties[name]=true;return false;}// aria-* attributes should be lowercase; suggest the lowercase version.
 	if(name!==standardName){process.env.NODE_ENV!=='production'?warning(false,'Unknown ARIA attribute %s. Did you mean %s?%s',name,standardName,ReactComponentTreeHook.getStackAddendumByID(debugID)):void 0;warnedProperties[name]=true;return true;}}return true;}function warnInvalidARIAProps(debugID,element){var invalidProps=[];for(var key in element.props){var isValid=validateProperty(element.type,key,debugID);if(!isValid){invalidProps.push(key);}}var unknownPropString=invalidProps.map(function(prop){return'`'+prop+'`';}).join(', ');if(invalidProps.length===1){process.env.NODE_ENV!=='production'?warning(false,'Invalid aria prop %s on <%s> tag. '+'For details, see https://fb.me/invalid-aria-prop%s',unknownPropString,element.type,ReactComponentTreeHook.getStackAddendumByID(debugID)):void 0;}else if(invalidProps.length>1){process.env.NODE_ENV!=='production'?warning(false,'Invalid aria props %s on <%s> tag. '+'For details, see https://fb.me/invalid-aria-prop%s',unknownPropString,element.type,ReactComponentTreeHook.getStackAddendumByID(debugID)):void 0;}}function handleElement(debugID,element){if(element==null||typeof element.type!=='string'){return;}if(element.type.indexOf('-')>=0||element.props.is){return;}warnInvalidARIAProps(debugID,element);}var ReactDOMInvalidARIAHook={onBeforeMountComponent:function onBeforeMountComponent(debugID,element){if(process.env.NODE_ENV!=='production'){handleElement(debugID,element);}},onBeforeUpdateComponent:function onBeforeUpdateComponent(debugID,element){if(process.env.NODE_ENV!=='production'){handleElement(debugID,element);}}};module.exports=ReactDOMInvalidARIAHook;
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./~/process/browser.js */ 3)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./../../process/browser.js */ 3)))
 
 /***/ },
 /* 178 */
@@ -7514,9 +7514,17 @@
   \********************************/
 /***/ function(module, exports, __webpack_require__) {
 
-	'use strict';Object.defineProperty(exports,"__esModule",{value:true});var _createClass=function(){function defineProperties(target,props){for(var i=0;i<props.length;i++){var descriptor=props[i];descriptor.enumerable=descriptor.enumerable||false;descriptor.configurable=true;if("value"in descriptor)descriptor.writable=true;Object.defineProperty(target,descriptor.key,descriptor);}}return function(Constructor,protoProps,staticProps){if(protoProps)defineProperties(Constructor.prototype,protoProps);if(staticProps)defineProperties(Constructor,staticProps);return Constructor;};}();var _react=__webpack_require__(/*! react */ 1);var _react2=_interopRequireDefault(_react);__webpack_require__(/*! ./App.css */ 179);var _SignUpForm=__webpack_require__(/*! ./SignUp/SignUpForm.jsx */ 180);var _SignUpForm2=_interopRequireDefault(_SignUpForm);var _LogInForm=__webpack_require__(/*! ./Login/LogInForm.jsx */ 182);var _LogInForm2=_interopRequireDefault(_LogInForm);function _interopRequireDefault(obj){return obj&&obj.__esModule?obj:{default:obj};}function _classCallCheck(instance,Constructor){if(!(instance instanceof Constructor)){throw new TypeError("Cannot call a class as a function");}}function _possibleConstructorReturn(self,call){if(!self){throw new ReferenceError("this hasn't been initialised - super() hasn't been called");}return call&&(typeof call==="object"||typeof call==="function")?call:self;}function _inherits(subClass,superClass){if(typeof superClass!=="function"&&superClass!==null){throw new TypeError("Super expression must either be null or a function, not "+typeof superClass);}subClass.prototype=Object.create(superClass&&superClass.prototype,{constructor:{value:subClass,enumerable:false,writable:true,configurable:true}});if(superClass)Object.setPrototypeOf?Object.setPrototypeOf(subClass,superClass):subClass.__proto__=superClass;}var App=function(_Component){_inherits(App,_Component);function App(){_classCallCheck(this,App);var _this=_possibleConstructorReturn(this,(App.__proto__||Object.getPrototypeOf(App)).call(this));_this.state={data:[],signup:{username:'',password:''},login:{loggedIn:false,username:'',password:''}};return _this;}////////////////////////////////////////User Auth from Pern React Template
-	_createClass(App,[{key:'updateFormSignUpUsername',value:function updateFormSignUpUsername(e){console.log(e.target.value);this.setState({signup:{username:e.target.value,password:this.state.signup.password}});}},{key:'updateFormSignUpPassword',value:function updateFormSignUpPassword(e){console.log(e.target.value);this.setState({signup:{username:this.state.signup.username,password:e.target.value}});}},{key:'updateFormLogInUsername',value:function updateFormLogInUsername(e){this.setState({login:{username:e.target.value,password:this.state.login.password}});}},{key:'updateFormLogInPassword',value:function updateFormLogInPassword(e){this.setState({login:{username:this.state.login.username,password:e.target.value}});}},{key:'handleSignUp',value:function handleSignUp(){fetch('/api/users',{headers:{'Content-Type':'application/json'},method:'POST',body:JSON.stringify({username:this.state.signup.username,password:this.state.signup.password})}).then(this.setState({signup:{username:'',password:''}})).then(this.alertInfo('You have signed up!')).catch(function(err){return console.log(err);});}},{key:'handleLogIn',value:function handleLogIn(){fetch('/api/auth',{headers:{'Content-Type':'application/json'},method:'POST',body:JSON.stringify({username:this.state.login.username,password:this.state.login.password})}).then(this.setState({login:{username:'',password:''}})).then(this.onSuccessfulLogIn).catch(function(err){return console.log(err);});}},{key:'onSuccessfulLogIn',value:function onSuccessfulLogIn(a,b){console.log(a,b);}},{key:'alertInfo',value:function alertInfo(msg){alert(msg);}///////////////////////////////////////////////////////////////////////
-	},{key:'getWatsonData',value:function getWatsonData(){var _this2=this;fetch('/api/watson').then(function(r){return r.json();}).then(function(tone){_this2.setState({data:tone});});}},{key:'render',value:function render(){var _this3=this;return _react2.default.createElement('div',null,_react2.default.createElement(_SignUpForm2.default,{signUpUsername:this.state.signup.username,signUpPassword:this.state.signup.password,updateFormUsername:function updateFormUsername(event){return _this3.updateFormSignUpUsername(event);},updateFormPassword:function updateFormPassword(event){return _this3.updateFormSignUpPassword(event);},handleFormSubmit:function handleFormSubmit(){return _this3.handleSignUp();}}),_react2.default.createElement(_LogInForm2.default,{className:this.state.login.loggedIn?'hidden':'',logInUsername:this.state.login.username,logInPassword:this.state.login.password,updateFormUsername:function updateFormUsername(event){return _this3.updateFormLogInUsername(event);},updateFormPassword:function updateFormPassword(event){return _this3.updateFormLogInPassword(event);},handleFormSubmit:function handleFormSubmit(){return _this3.handleLogIn();}}),_react2.default.createElement('h1',null,'Heyo'),_react2.default.createElement('form',null,_react2.default.createElement('input',{type:'text'}),_react2.default.createElement('input',{type:'submit'})),_react2.default.createElement('button',{onClick:function onClick(){return _this3.getWatsonData();}},'get watson info'));}}]);return App;}(_react.Component);exports.default=App;
+	'use strict';Object.defineProperty(exports,"__esModule",{value:true});var _createClass=function(){function defineProperties(target,props){for(var i=0;i<props.length;i++){var descriptor=props[i];descriptor.enumerable=descriptor.enumerable||false;descriptor.configurable=true;if("value"in descriptor)descriptor.writable=true;Object.defineProperty(target,descriptor.key,descriptor);}}return function(Constructor,protoProps,staticProps){if(protoProps)defineProperties(Constructor.prototype,protoProps);if(staticProps)defineProperties(Constructor,staticProps);return Constructor;};}();var _react=__webpack_require__(/*! react */ 1);var _react2=_interopRequireDefault(_react);__webpack_require__(/*! ./App.css */ 179);var _SignUpForm=__webpack_require__(/*! ./SignUp/SignUpForm.jsx */ 180);var _SignUpForm2=_interopRequireDefault(_SignUpForm);var _LogInForm=__webpack_require__(/*! ./Login/LogInForm.jsx */ 182);var _LogInForm2=_interopRequireDefault(_LogInForm);function _interopRequireDefault(obj){return obj&&obj.__esModule?obj:{default:obj};}function _classCallCheck(instance,Constructor){if(!(instance instanceof Constructor)){throw new TypeError("Cannot call a class as a function");}}function _possibleConstructorReturn(self,call){if(!self){throw new ReferenceError("this hasn't been initialised - super() hasn't been called");}return call&&(typeof call==="object"||typeof call==="function")?call:self;}function _inherits(subClass,superClass){if(typeof superClass!=="function"&&superClass!==null){throw new TypeError("Super expression must either be null or a function, not "+typeof superClass);}subClass.prototype=Object.create(superClass&&superClass.prototype,{constructor:{value:subClass,enumerable:false,writable:true,configurable:true}});if(superClass)Object.setPrototypeOf?Object.setPrototypeOf(subClass,superClass):subClass.__proto__=superClass;}var App=function(_Component){_inherits(App,_Component);function App(){_classCallCheck(this,App);var _this=_possibleConstructorReturn(this,(App.__proto__||Object.getPrototypeOf(App)).call(this));_this.state={watsonData:{},signup:{username:'',password:''},login:{loggedIn:false,username:'',password:''}};return _this;}_createClass(App,[{key:'getWatsonData',value:function getWatsonData(){var _this2=this;fetch('/api/watson').then(function(r){return r.json();}).then(function(tone){_this2.setState({watsonData:tone.document_tone.tone_categories});console.log('yoyoyo',_this2.state.watsonData);});}},{key:'updateFormSignUpUsername',// { tones:
+	//    [ { score: 0.058084, tone_id: 'anger', tone_name: 'Anger' },
+	//      { score: 0.02035, tone_id: 'disgust', tone_name: 'Disgust' },
+	//      { score: 0.028603, tone_id: 'fear', tone_name: 'Fear' },
+	//      { score: 0.571004, tone_id: 'joy', tone_name: 'Joy' },
+	//      { score: 0.363121, tone_id: 'sadness', tone_name: 'Sadness' } ],
+	//   category_id: 'emotion_tone',
+	//   category_name: 'Emotion Tone' }
+	////////////////////////////////////////User Auth from Pern React Template
+	value:function updateFormSignUpUsername(e){console.log(e.target.value);this.setState({signup:{username:e.target.value,password:this.state.signup.password}});}},{key:'updateFormSignUpPassword',value:function updateFormSignUpPassword(e){console.log(e.target.value);this.setState({signup:{username:this.state.signup.username,password:e.target.value}});}},{key:'updateFormLogInUsername',value:function updateFormLogInUsername(e){this.setState({login:{username:e.target.value,password:this.state.login.password}});}},{key:'updateFormLogInPassword',value:function updateFormLogInPassword(e){this.setState({login:{username:this.state.login.username,password:e.target.value}});}},{key:'handleSignUp',value:function handleSignUp(){fetch('/api/users',{headers:{'Content-Type':'application/json'},method:'POST',body:JSON.stringify({username:this.state.signup.username,password:this.state.signup.password})}).then(this.setState({signup:{username:'',password:''}})).then(this.alertInfo('You have signed up!')).catch(function(err){return console.log(err);});}},{key:'handleLogIn',value:function handleLogIn(){fetch('/api/auth',{headers:{'Content-Type':'application/json'},method:'POST',body:JSON.stringify({username:this.state.login.username,password:this.state.login.password})}).then(this.setState({login:{username:'',password:''}})).then(this.onSuccessfulLogIn).catch(function(err){return console.log(err);});}},{key:'onSuccessfulLogIn',value:function onSuccessfulLogIn(a,b){console.log(a,b);}},{key:'alertInfo',value:function alertInfo(msg){alert(msg);}///////////////////////////////////////////////////////////////////////
+	},{key:'render',value:function render(){var _this3=this;return _react2.default.createElement('div',null,_react2.default.createElement(_SignUpForm2.default,{signUpUsername:this.state.signup.username,signUpPassword:this.state.signup.password,updateFormUsername:function updateFormUsername(event){return _this3.updateFormSignUpUsername(event);},updateFormPassword:function updateFormPassword(event){return _this3.updateFormSignUpPassword(event);},handleFormSubmit:function handleFormSubmit(){return _this3.handleSignUp();}}),_react2.default.createElement(_LogInForm2.default,{className:this.state.login.loggedIn?'hidden':'',logInUsername:this.state.login.username,logInPassword:this.state.login.password,updateFormUsername:function updateFormUsername(event){return _this3.updateFormLogInUsername(event);},updateFormPassword:function updateFormPassword(event){return _this3.updateFormLogInPassword(event);},handleFormSubmit:function handleFormSubmit(){return _this3.handleLogIn();}}),_react2.default.createElement('h1',null,'Heyo'),_react2.default.createElement('form',null,_react2.default.createElement('input',{type:'text'}),_react2.default.createElement('input',{type:'submit'})),_react2.default.createElement('button',{onClick:function onClick(){return _this3.getWatsonData();}},'get watson info'));}}]);return App;}(_react.Component);exports.default=App;
 
 /***/ },
 /* 179 */
