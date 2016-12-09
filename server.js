@@ -8,6 +8,7 @@ const bodyParser = require('body-parser');
 const usersRouter   = require('./routes/api/users');
 const authRouter    = require('./routes/api/auth');
 const watsonRouter = require('./routes/api/watson');
+const databaseRouter = require('./routes/api/database');
 
 const app     = express();
 const PORT    = process.argv[2] || process.env.PORT || 3000;
@@ -21,6 +22,7 @@ app.use(cookieParser());
 app.use(bodyParser.json());
 
 app.use('/api/watson', watsonRouter);
+app.use('/api/database', databaseRouter);
 app.use('/api/users', usersRouter);
 app.use('/api/auth', authRouter);
 
