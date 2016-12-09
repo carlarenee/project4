@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import './App.css';
 import SignUpForm from './SignUp/SignUpForm.jsx';
 import LogInForm from './Login/LogInForm.jsx';
+import Input from './Input/Input.jsx';
+import Result from './Result/Result.jsx';
 
 class App extends Component {
 
@@ -9,7 +11,20 @@ class App extends Component {
     super();
 
     this.state = {
-      watsonData: {},
+      emotion: {
+        anger: '',
+        disgust: '',
+        fear: '',
+        joy: '',
+        sadness: ''
+      },
+      score: {
+        anger: '',
+        disgust: '',
+        fear: '',
+        joy: '',
+        sadness: ''
+      },
       signup: {
         username: '',
         password: ''
@@ -18,30 +33,41 @@ class App extends Component {
         loggedIn: false,
         username: '',
         password: ''
-      }
+      },
+      username: '',
+      input: ''
     };
   }
 
+  updateInput(event) {
+    this.setState ({
+      input: event.target.value
+      })
+    };
+
+
   getWatsonData() {
-  fetch(`/api/watson`)
+  fetch(`/api/watson?t=${this.state.input}`)
   .then(r => r.json())
   .then((tone) => {
     this.setState({
-      watsonData: tone.document_tone.tone_categories
+      emotion: {
+        anger: tone.document_tone.tone_categories[0].tones[0].tone_name,
+        disgust: tone.document_tone.tone_categories[0].tones[1].tone_name,
+        fear: tone.document_tone.tone_categories[0].tones[2].tone_name,
+        joy: tone.document_tone.tone_categories[0].tones[3].tone_name,
+        sadness: tone.document_tone.tone_categories[0].tones[4].tone_name
+      },
+      score: {
+        anger: tone.document_tone.tone_categories[0].tones[0].score,
+        disgust: tone.document_tone.tone_categories[0].tones[1].score,
+        fear: tone.document_tone.tone_categories[0].tones[2].score,
+        joy: tone.document_tone.tone_categories[0].tones[3].score,
+        sadness: tone.document_tone.tone_categories[0].tones[4].score
+      }
     })
-    console.log('yoyoyo', this.state.watsonData);
   })
 };
-
-
-// { tones:
-//    [ { score: 0.058084, tone_id: 'anger', tone_name: 'Anger' },
-//      { score: 0.02035, tone_id: 'disgust', tone_name: 'Disgust' },
-//      { score: 0.028603, tone_id: 'fear', tone_name: 'Fear' },
-//      { score: 0.571004, tone_id: 'joy', tone_name: 'Joy' },
-//      { score: 0.363121, tone_id: 'sadness', tone_name: 'Sadness' } ],
-//   category_id: 'emotion_tone',
-//   category_name: 'Emotion Tone' }
 
 
 ////////////////////////////////////////User Auth from Pern React Template
@@ -116,6 +142,7 @@ class App extends Component {
       })
     })
     .then(this.setState({
+      username: this.state.login.username,
       login: {
         username: '',
         password: ''
@@ -153,12 +180,19 @@ class App extends Component {
           handleFormSubmit={() => this.handleLogIn()}
         />
 
-        <h1>Heyo</h1>
-        <form>
-          <input type="text" />
-          <input type="submit" />
-        </form>
-        <button onClick={() => this.getWatsonData()}>get watson info</button>
+        <h1>Attitude Adjustment</h1>
+        <h3>Hi, {this.state.username}</h3>
+
+          <h2>what's on your mind?</h2>
+          <input type = "text" name = "userInput" onChange={(e) => this.updateInput(e)} />
+          <input type = "submit" value = "submit" onClick={() => this.getWatsonData()} />
+
+
+        <p>{this.state.emotion.anger} {this.state.score.anger}</p>
+        <p>{this.state.emotion.disgust} {this.state.score.disgust}</p>
+        <p>{this.state.emotion.fear} {this.state.score.fear}</p>
+        <p>{this.state.emotion.joy} {this.state.score.joy}</p>
+        <p>{this.state.emotion.sadness} {this.state.score.sadness}</p>
       </div>
       )
     }
