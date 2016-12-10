@@ -16,5 +16,14 @@ function saveFeedback(req, res, next) {
   .catch(err => next(err));
 }
 
+function getCity(req, res, next) {
+  db.one('SELECT city FROM users WHERE username = $1;', [req.params.username])
+  .then((city) => {
+   res.city = city;
+   next();
+ })
+  .catch(err => next(err));
+}
 
-module.exports = { getFeedback, saveFeedback };
+
+module.exports = { getFeedback, saveFeedback, getCity };

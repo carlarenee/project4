@@ -37,7 +37,7 @@ class App extends Component {
       },
       username: '',
       input: '',
-      userCity: '',
+      city: '',
       weather: '',
       box: {
         anger: 'angerBox',
@@ -100,6 +100,18 @@ class App extends Component {
     this.getWatsonData();
     setTimeout(() => { this.saveWatsonData(anger, disgust, fear, joy, sadness, username) }, 5000);
   }
+
+  getCity(username) {
+    return fetch(`/api/database`)
+      .then(r => r.json())
+    .then((city) => {
+      this.setState({
+        city: city,
+      });
+    });
+  }
+
+
 
   getWeatherData() {
     fetch(`/api/weather?q=${this.state.city}`)
@@ -193,7 +205,7 @@ class App extends Component {
         username: '',
         password: '',
         city: '',
-      userCity: this.state.signup.city,
+      city: this.state.signup.city,
       },
     }))
     .then(this.alertInfo('You have signed up!'))
@@ -201,7 +213,6 @@ class App extends Component {
   }
 
   handleLogIn() {
-    console.log('please find my city', this.state.userCity);
     fetch('/api/auth', {
       headers: {
         'Content-Type': 'application/json',
@@ -215,7 +226,7 @@ class App extends Component {
     })
     .then(this.setState({
       username: this.state.login.username,
-      userCity: this.state.login.city,
+      city: this.state.login.city,
       login: {
         username: '',
         password: '',
@@ -223,6 +234,7 @@ class App extends Component {
       },
     }))
     .then(this.onSuccessfulLogIn)
+    .then(() => this.getCity())
     .catch(err => console.log(err));
   }
 
@@ -282,10 +294,7 @@ class App extends Component {
           opacityFear={this.state.score.fear}
           opacityJoy={this.state.score.joy}
           opacitySadness={this.state.score.sadness}
-
         />
-
-
       </div>
     );
   }
