@@ -1,5 +1,8 @@
-.redBox {
-  height: 100px;
-  width: 100px;
-  background-color: red;
+.emotionContainer {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  align-content: center;
 }

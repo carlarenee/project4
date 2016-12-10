@@ -231,6 +231,11 @@ class App extends Component {
 
         <Result
           opacityAnger={this.state.score.anger}
+          opacityDisgust={this.state.score.disgust}
+          opacityFear={this.state.score.fear}
+          opacityJoy={this.state.score.joy}
+          opacitySadness={this.state.score.sadness}
+
         />
 
 
