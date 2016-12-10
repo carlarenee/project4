@@ -9,6 +9,7 @@ const usersRouter   = require('./routes/api/users');
 const authRouter    = require('./routes/api/auth');
 const watsonRouter = require('./routes/api/watson');
 const databaseRouter = require('./routes/api/database');
+const weatherRouter = require('./routes/api/weather');
 
 const app     = express();
 const PORT    = process.argv[2] || process.env.PORT || 3000;
@@ -25,5 +26,6 @@ app.use('/api/watson', watsonRouter);
 app.use('/api/database', databaseRouter);
 app.use('/api/users', usersRouter);
 app.use('/api/auth', authRouter);
+app.use('/api/weather', weatherRouter);
 
 app.listen(PORT, () => console.log('Hey there', PORT));

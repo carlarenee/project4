@@ -1,4 +1,13 @@
+.bigContainer {
+  text-align: center;
+}
+
+.inputBox {
+  width: 400px;
+}
 .emotionContainer {
+  margin: 0 auto;
+  width: 70vw;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;

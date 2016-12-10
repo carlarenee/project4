@@ -12,42 +12,42 @@ class Result extends Component {
 
       let redBox = {
         position: 'relative',
-        height: this.props.opacityAnger * 500,
-        width: this.props.opacityAnger * 500,
-        borderRadius: (this.props.opacityAnger * 500) /2,
+        height: this.props.opacityAnger * 300,
+        width: this.props.opacityAnger * 300,
+        borderRadius: (this.props.opacityAnger * 300) /2,
         backgroundColor: 'red',
         opacity: this.props.opacityAnger * 10,
       }
 
       let greenBox = {
         position: 'relative',
-        height: this.props.opacityDisgust * 500,
-        width: this.props.opacityDisgust * 500,
-        borderRadius: (this.props.opacityDisgust * 500) /2,
+        height: this.props.opacityDisgust * 300,
+        width: this.props.opacityDisgust * 300,
+        borderRadius: (this.props.opacityDisgust * 300) /2,
         backgroundColor: 'green',
         opacity: this.props.opacityDisgust * 10,
       }
       let purpleBox = {
         position: 'relative',
-        height: this.props.opacityFear * 500,
-        width: this.props.opacityFear * 500,
-        borderRadius: (this.props.opacityFear * 500) /2,
+        height: this.props.opacityFear * 300,
+        width: this.props.opacityFear * 300,
+        borderRadius: (this.props.opacityFear * 300) /2,
         backgroundColor: 'rebeccaPurple',
         opacity: this.props.opacityFear * 10,
       }
       let yellowBox = {
         position: 'relative',
-        height: this.props.opacityJoy * 500,
-        width: this.props.opacityJoy * 500,
-        borderRadius: (this.props.opacityJoy * 500) /2,
+        height: this.props.opacityJoy * 300,
+        width: this.props.opacityJoy * 300,
+        borderRadius: (this.props.opacityJoy * 300) /2,
         backgroundColor: 'yellow',
         opacity: this.props.opacityJoy * 10,
       }
       let blueBox = {
         position: 'relative',
-        height: this.props.opacitySadness * 500,
-        width: this.props.opacitySadness * 500,
-        borderRadius: (this.props.opacitySadness * 500) /2,
+        height: this.props.opacitySadness * 300,
+        width: this.props.opacitySadness * 300,
+        borderRadius: (this.props.opacitySadness * 300) /2,
         backgroundColor: 'blue',
         opacity: this.props.opacitySadness * 10,
       }
