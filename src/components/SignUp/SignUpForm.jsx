@@ -1,15 +1,17 @@
 import React, { Component } from 'react';
 import style from './SignUpForm.css';
 
-// create a React Component called _App_
 class SignUpForm extends Component {
 
   render(){
     return (
-      <div id={style['form-container']}>
+      <div className={this.props.signUpBoxDisplay}>
+        <div className="signUpBoxContent">
+        <h2>Welcome to Weather Report</h2>
+        <p>Tell me more about yourself:</p>
         <input
           type="text"
-          placeholder="email"
+          placeholder="username"
           value={this.props.signUpUsername}
           onChange={this.props.updateFormUsername}
         />
@@ -21,13 +23,14 @@ class SignUpForm extends Component {
         />
         <input
           type="text"
-          placeholder="city"
+          placeholder="enter your city"
           value={this.props.signUpCity}
           onChange={this.props.updateFormCity}
         />
         <button onClick={this.props.handleFormSubmit}>
           SignUp!
         </button>
+      </div>
       </div>
     );
   }
