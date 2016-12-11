@@ -3,6 +3,7 @@ import './App.css';
 import SignUpForm from './SignUp/SignUpForm.jsx';
 import LogInForm from './Login/LogInForm.jsx';
 import Result from './Result/Result.jsx';
+import MyWeek from './MyWeek/MyWeek.jsx';
 
 class App extends Component {
 
@@ -79,12 +80,12 @@ class App extends Component {
           'Content-type': 'application/json',
         },
         body: JSON.stringify({
-          'anger': anger,
-          'disgust': disgust,
-          'fear': fear,
-          'joy': joy,
-          'sadness': sadness,
-          'username': username,
+          anger: this.state.score.anger,
+          disgust: this.state.score.disgust,
+          fear: this.state.score.fear,
+          joy: this.state.score.joy,
+          sadness: this.state.score.sadness,
+          username: this.state.score.username,
         }),
     })
     .catch(err => console.log(err));
@@ -92,7 +93,7 @@ class App extends Component {
 
   handleSubmit(anger, disgust, fear, joy, sadness, username) {
     this.getWatsonData();
-    setTimeout(() => { this.saveWatsonData(anger, disgust, fear, joy, sadness, username) }, 5000);
+    setTimeout(() => { this.saveWatsonData(anger, disgust, fear, joy, sadness, username); }, 3000);
   }
 
 
@@ -210,23 +211,25 @@ class App extends Component {
           updateFormPassword={event => this.updateFormLogInPassword(event)}
           handleFormSubmit={() => this.handleLogIn()}
         />
-        <div className={this.state.bigContainer}>
-          <div className="bigContainerContent">
-          <h1>The Weather Report</h1>
-          <h3>Hi, {this.state.username}</h3>
-          <h2>what is on your mind?</h2>
-          <input className="inputBox" type="text" name="userInput" onChange={(e) => this.updateInput(e)} />
-          <input type="submit" value="submit" onClick={() => this.handleSubmit(this.state.score.anger, this.state.score.disgust, this.state.score.fear, this.state.score.joy, this.state.score.sadness, this.state.username)} />
 
-          <Result
-            opacityAnger={this.state.score.anger}
-            opacityDisgust={this.state.score.disgust}
-            opacityFear={this.state.score.fear}
-            opacityJoy={this.state.score.joy}
-            opacitySadness={this.state.score.sadness}
-          />
-        </div>
-        </div>
+          <div className={this.state.bigContainer}>
+            <div className="bigContainerContent">
+              <h1>The Weather Report</h1>
+              <h3>Hi, {this.state.username}</h3>
+              <h2>what is on your mind?</h2>
+              <input className="inputBox" type="text" name="userInput" onChange={(e) => this.updateInput(e)} />
+              <input type="submit" value="submit" onClick={() => this.handleSubmit(this.state.score.anger, this.state.score.disgust, this.state.score.fear, this.state.score.joy, this.state.score.sadness, this.state.username)} />
+
+              <Result
+                opacityAnger={this.state.score.anger}
+                opacityDisgust={this.state.score.disgust}
+                opacityFear={this.state.score.fear}
+                opacityJoy={this.state.score.joy}
+                opacitySadness={this.state.score.sadness}
+              />
+              <MyWeek />
+            </div>
+          </div>
 
 
       </div>

@@ -13,7 +13,7 @@ CREATE TABLE users (
 );
 
 CREATE TABLE watson (
-  date TIMESTAMP DEFAULT current_timestamp,
+  saved_on TIMESTAMP DEFAULT current_timestamp,
   anger_score VARCHAR,
   disgust_score VARCHAR,
   fear_score VARCHAR,
