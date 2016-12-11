@@ -14,11 +14,11 @@ CREATE TABLE users (
 
 CREATE TABLE watson (
   date TIMESTAMP DEFAULT current_timestamp,
-  anger_score VARCHAR NOT NULL DEFAULT 0,
-  disgust_score VARCHAR NOT NULL DEFAULT 0,
-  fear_score VARCHAR NOT NULL DEFAULT 0,
-  joy_score VARCHAR NOT NULL DEFAULT 0,
-  sadness_score VARCHAR NOT NULL DEFAULT 0,
+  anger_score VARCHAR,
+  disgust_score VARCHAR,
+  fear_score VARCHAR,
+  joy_score VARCHAR,
+  sadness_score VARCHAR,
   username VARCHAR REFERENCES users(username)
 );
 

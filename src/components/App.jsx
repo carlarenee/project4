@@ -62,6 +62,7 @@ class App extends Component {
           sadness: tone.document_tone.tone_categories[0].tones[4].score,
         },
       });
+      console.log(this.state.score.anger);
     });
   }
 
@@ -84,8 +85,8 @@ class App extends Component {
           'joy': joy,
           'sadness': sadness,
           'username': username,
-         })
-      })
+        }),
+    })
     .catch(err => console.log(err));
   }
 
@@ -214,13 +215,8 @@ class App extends Component {
           <h1>The Weather Report</h1>
           <h3>Hi, {this.state.username}</h3>
           <h2>what is on your mind?</h2>
-          <input type="text" name="userInput" onChange={(e) => this.updateInput(e)} />
-          <input type="submit" value="submit" onClick={() => this.handleSubmit(
-            this.state.score.anger, this.state.score.disgust,
-            this.state.score.fear,
-            this.state.score.joy,
-            this.state.score.sadness)}
-          />
+          <input className="inputBox" type="text" name="userInput" onChange={(e) => this.updateInput(e)} />
+          <input type="submit" value="submit" onClick={() => this.handleSubmit(this.state.score.anger, this.state.score.disgust, this.state.score.fear, this.state.score.joy, this.state.score.sadness, this.state.username)} />
 
           <Result
             opacityAnger={this.state.score.anger}

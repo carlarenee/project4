@@ -1,8 +1,8 @@
 const db = require('./db.js');
 
 function createUser(req, res, next) {
-  console.log(req.body.username, req.body.password, req.body.city);
-  db.none(`INSERT INTO users (username, password, city) VALUES ($1, $2, $3)`, [req.body.username, req.body.password, req.body.city])
+  console.log(req.body.username, req.body.password);
+  db.none(`INSERT INTO users (username, password) VALUES ($1, $2)`, [req.body.username, req.body.password])
     .then(next())
     .catch((err) => {
       console.log(err);

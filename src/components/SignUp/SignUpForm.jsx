@@ -21,12 +21,7 @@ class SignUpForm extends Component {
           value={this.props.signUpPassword}
           onChange={this.props.updateFormPassword}
         />
-        <input
-          type="text"
-          placeholder="enter your city"
-          value={this.props.signUpCity}
-          onChange={this.props.updateFormCity}
-        />
+
         <button onClick={this.props.handleFormSubmit}>
           SignUp!
         </button>
