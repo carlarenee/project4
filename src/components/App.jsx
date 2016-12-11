@@ -85,7 +85,7 @@ class App extends Component {
           fear: this.state.score.fear,
           joy: this.state.score.joy,
           sadness: this.state.score.sadness,
-          username: this.state.score.username,
+          username: this.state.username,
         }),
     })
     .catch(err => console.log(err));
