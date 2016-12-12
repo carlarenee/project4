@@ -96,6 +96,12 @@ class App extends Component {
     setTimeout(() => { this.saveWatsonData(anger, disgust, fear, joy, sadness, username); }, 3000);
   }
 
+  getAverages(username) {
+  fetch(`/api/database/${this.state.username}`)
+    .then(r => r.json())
+    .then(() => console.log('from app this is the get averages', r));
+  }
+
 
 ////////////////////////////////////////User Auth from Pern React Template
   updateFormSignUpUsername(e) {
@@ -227,6 +233,12 @@ class App extends Component {
                 opacityJoy={this.state.score.joy}
                 opacitySadness={this.state.score.sadness}
               />
+              <div className="options">
+              <button onClick={() => {this.getAverages(this.state.username)}}>get averages</button>
+                <div>Quote of the Day</div>
+                <div>Song of the Day</div>
+                <div>Daily Challenge</div>
+              </div>
               <MyWeek />
             </div>
           </div>
