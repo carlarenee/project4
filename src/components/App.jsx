@@ -25,6 +25,13 @@ class App extends Component {
         joy: '',
         sadness: '',
       },
+      dailyAverage: {
+        anger: '',
+        disgust: '',
+        fear: '',
+        joy: '',
+        sadness: '',
+      },
       signup: {
         username: '',
         password: '',
@@ -63,7 +70,6 @@ class App extends Component {
           sadness: tone.document_tone.tone_categories[0].tones[4].score,
         },
       });
-      console.log(this.state.score.anger);
     });
   }
 
@@ -99,7 +105,23 @@ class App extends Component {
   getAverages(username) {
   fetch(`/api/database/${this.state.username}`)
     .then(r => r.json())
-    .then(() => console.log('from app this is the get averages', r));
+    .then((scores) => {
+      this.setState({
+        dailyAverage: {
+
+          anger:
+            let catcher = 0;
+            scores.forEach((ang) => {
+            catcher += parseFloat(ang.anger_score);
+          }),
+          disgust: '',
+          fear: '',
+          joy: '',
+          sadness: '',
+          }
+      });
+    });
+    console.log('this is the sum of my anger', this.state.dailyAverage.anger);
   }
 
 
