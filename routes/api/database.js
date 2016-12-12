@@ -1,12 +1,14 @@
 const database             = require('express').Router();
-const { getFeedback, saveFeedback }  = require('../../models/watson');
+const { saveFeedback, getDailyScores }  = require('../../models/watson');
 
-database.get('/:username', getFeedback, (req, res) => {
-  res.json(res.images || []);
+database.get('/:username', getDailyScores, (req, res) => {
+  console.log('$$$$$$$$$$$$$$$$$$$$$$$$$', res.scores);
+  res.json(res.scores || []);
 });
 
 database.post('/', saveFeedback, (req, res) => {
   res.json({ message: 'you saved some feedback' });
 });
+
 
 module.exports = database;

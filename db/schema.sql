@@ -2,6 +2,7 @@ BEGIN;
 
 DROP TABLE IF EXISTS users CASCADE;
 DROP TABLE IF EXISTS watson CASCADE;
+DROP TABLE IF EXISTS averages CASCADE;
 
 
 CREATE TABLE users (
@@ -20,6 +21,16 @@ CREATE TABLE watson (
   joy_score VARCHAR,
   sadness_score VARCHAR,
   username VARCHAR REFERENCES users(username)
+);
+
+CREATE TABLE averages (
+  saved_on DATE REFERENCES watson(saved_on),
+  avg_anger VARCHAR,
+  avg_disgust VARCHAR,
+  avg_fear VARCHAR,
+  avg_joy VARCHAR,
+  avg_sadness VARCHAR,
+  username VARCHAR REFERENCES watson(username)
 );
 
 COMMIT;
