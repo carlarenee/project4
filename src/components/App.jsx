@@ -25,7 +25,7 @@ class App extends Component {
         joy: '',
         sadness: '',
       },
-      dayOneAverage: {
+      daySevenAverage: {
         anger: '',
         disgust: '',
         fear: '',
@@ -107,27 +107,40 @@ class App extends Component {
   fetch(`/api/database/${this.state.username}`)
     .then(r => r.json())
     .then((scores) => {
-      console.log('this is the sum of my anger', scores);
       let anger= 0;
       for (let i = 0; i < scores.length; i++) {
-        anger += parseFloat(scores[i].anger_score)
+        anger += parseFloat(scores[i].anger_score);
       }
+      let disgust= 0;
+      for (let i = 0; i < scores.length; i++) {
+        disgust += parseFloat(scores[i].disgust_score);
+      }
+      let fear= 0;
+      for (let i = 0; i < scores.length; i++) {
+        fear += parseFloat(scores[i].fear_score);
+      }
+      let joy= 0;
+      for (let i = 0; i < scores.length; i++) {
+        joy += parseFloat(scores[i].joy_score);
+      }
+      let sadness= 0;
+      for (let i = 0; i < scores.length; i++) {
+        sadness += parseFloat(scores[i].sadness_score);
+      }
+
       this.setState({
-        dayOneAverage: {
-          anger: (anger/scores.length),
-          disgust: '',
-          fear: '',
-          joy: '',
-          sadness: '',
-          },
+        daySevenAverage: {
+          anger: (anger / scores.length),
+          disgust: (disgust / scores.length),
+          fear: (fear / scores.length),
+          joy: (joy / scores.length),
+          sadness: (sadness / scores.length),
+        },
       });
-    }
-      )
-    console.log('this is the sum of my anger', this.state.dayOneAverage.anger);
-    };
-
-
-
+    },
+      );
+    console.log('this is the sum of my anger', this.state.daySevenAverage);
+  }
 
 ////////////////////////////////////////User Auth from Pern React Template
   updateFormSignUpUsername(e) {
@@ -265,7 +278,13 @@ class App extends Component {
                 <div>Song of the Day</div>
                 <div>Daily Challenge</div>
               </div>
-              <MyWeek />
+              <MyWeek
+              todayAnger={this.state.daySevenAverage.anger}
+              todayDisgust={this.state.daySevenAverage.disgust}
+              todayFear={this.state.daySevenAverage.fear}
+              todayJoy={this.state.daySevenAverage.joy}
+              todaySadness={this.state.daySevenAverage.sadness}
+              />
             </div>
           </div>
 
