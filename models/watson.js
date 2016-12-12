@@ -16,7 +16,6 @@ function saveFeedback(req, res, next) {
 }
 
 function getDailyScores(req, res, next) {
-console.log('yeyeyeyeyeyeyeyeyeyeyey', req.params.username);
 db.any(`SELECT * FROM watson WHERE saved_on = current_date AND username = $1;`, [req.params.username])
 .then((scores) => {
   res.scores = scores;
@@ -25,6 +24,15 @@ db.any(`SELECT * FROM watson WHERE saved_on = current_date AND username = $1;`, 
 .catch(error => next(error));
 }
 
+function getDaySixScores(req, res, next) {
+db.any(`SELECT * FROM watson WHERE saved_on = current_date - 1 AND username = $1;`, [req.params.username])
+.then((scores2) => {
+  res.scores2 = scores2;
+  next();
+})
+.catch(error => next(error));
+}
 
-module.exports = { saveFeedback, getDailyScores };
+
+module.exports = { saveFeedback, getDailyScores, getDaySixScores };
 
