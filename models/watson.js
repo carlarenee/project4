@@ -42,12 +42,42 @@ db.any(`SELECT * FROM watson WHERE saved_on = current_date - 3 AND username = $1
 .catch(error => next(error));
 }
 
+function getDayThreeScores(req, res, next) {
+db.any(`SELECT * FROM watson WHERE saved_on = current_date - 4 AND username = $1;`, [req.params.username])
+.then((scores3) => {
+  res.scores3 = scores3;
+  next();
+})
+.catch(error => next(error));
+}
+
+function getDayTwoScores(req, res, next) {
+db.any(`SELECT * FROM watson WHERE saved_on = current_date - 5 AND username = $1;`, [req.params.username])
+.then((scores2) => {
+  res.scores2 = scores2;
+  next();
+})
+.catch(error => next(error));
+}
+
+function getDayOneScores(req, res, next) {
+db.any(`SELECT * FROM watson WHERE saved_on = current_date - 6 AND username = $1;`, [req.params.username])
+.then((scores1) => {
+  res.scores1 = scores1;
+  next();
+})
+.catch(error => next(error));
+}
+
 module.exports = {
   saveFeedback,
   getDailyScores,
   getDaySixScores,
   getDayFiveScores,
   getDayFourScores,
+  getDayThreeScores,
+  getDayTwoScores,
+  getDayOneScores,
 };
 
 

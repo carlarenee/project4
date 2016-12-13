@@ -257,7 +257,6 @@ class App extends Component {
       });
     },
       );
-    console.log('yup', this.state.daySixAverage.anger);
   }
 
   getDayFourAverages(username) {
@@ -296,7 +295,120 @@ class App extends Component {
       });
     },
       );
-    console.log('yup', this.state.daySixAverage.anger);
+  }
+
+  getDayThreeAverages(username) {
+  fetch(`/api/database/${this.state.username}/3`)
+    .then(r => r.json())
+    .then((scores3) => {
+      let anger= 0;
+      for (let i = 0; i < scores3.length; i++) {
+        anger += parseFloat(scores3[i].anger_score);
+      }
+      let disgust= 0;
+      for (let i = 0; i < scores3.length; i++) {
+        disgust += parseFloat(scores3[i].disgust_score);
+      }
+      let fear= 0;
+      for (let i = 0; i < scores3.length; i++) {
+        fear += parseFloat(scores3[i].fear_score);
+      }
+      let joy= 0;
+      for (let i = 0; i < scores3.length; i++) {
+        joy += parseFloat(scores3[i].joy_score);
+      }
+      let sadness= 0;
+      for (let i = 0; i < scores3.length; i++) {
+        sadness += parseFloat(scores3[i].sadness_score);
+      }
+
+      this.setState({
+        dayFiveAverage: {
+          anger: (anger / scores3.length),
+          disgust: (disgust / scores3.length),
+          fear: (fear / scores3.length),
+          joy: (joy / scores3.length),
+          sadness: (sadness / scores3.length),
+        },
+      });
+    },
+      );
+  }
+
+  getDayTwoAverages(username) {
+  fetch(`/api/database/${this.state.username}/2`)
+    .then(r => r.json())
+    .then((scores2) => {
+      let anger= 0;
+      for (let i = 0; i < scores2.length; i++) {
+        anger += parseFloat(scores2[i].anger_score);
+      }
+      let disgust= 0;
+      for (let i = 0; i < scores2.length; i++) {
+        disgust += parseFloat(scores2[i].disgust_score);
+      }
+      let fear= 0;
+      for (let i = 0; i < scores2.length; i++) {
+        fear += parseFloat(scores2[i].fear_score);
+      }
+      let joy= 0;
+      for (let i = 0; i < scores2.length; i++) {
+        joy += parseFloat(scores2[i].joy_score);
+      }
+      let sadness= 0;
+      for (let i = 0; i < scores2.length; i++) {
+        sadness += parseFloat(scores2[i].sadness_score);
+      }
+
+      this.setState({
+        dayFiveAverage: {
+          anger: (anger / scores2.length),
+          disgust: (disgust / scores2.length),
+          fear: (fear / scores2.length),
+          joy: (joy / scores2.length),
+          sadness: (sadness / scores2.length),
+        },
+      });
+    },
+      );
+  }
+
+  getDayOneAverages(username) {
+  fetch(`/api/database/${this.state.username}/1`)
+    .then(r => r.json())
+    .then((scores1) => {
+      let anger= 0;
+      for (let i = 0; i < scores1.length; i++) {
+        anger += parseFloat(scores1[i].anger_score);
+      }
+      let disgust= 0;
+      for (let i = 0; i < scores1.length; i++) {
+        disgust += parseFloat(scores1[i].disgust_score);
+      }
+      let fear= 0;
+      for (let i = 0; i < scores1.length; i++) {
+        fear += parseFloat(scores1[i].fear_score);
+      }
+      let joy= 0;
+      for (let i = 0; i < scores1.length; i++) {
+        joy += parseFloat(scores1[i].joy_score);
+      }
+      let sadness= 0;
+      for (let i = 0; i < scores1.length; i++) {
+        sadness += parseFloat(scores1[i].sadness_score);
+      }
+
+      this.setState({
+        dayFiveAverage: {
+          anger: (anger / scores1.length),
+          disgust: (disgust / scores1.length),
+          fear: (fear / scores1.length),
+          joy: (joy / scores1.length),
+          sadness: (sadness / scores1.length),
+        },
+      });
+    },
+      );
   }
 
   handleAverages(username) {
@@ -465,11 +577,29 @@ class App extends Component {
                 dayFiveJoy={this.state.dayFiveAverage.joy}
                 dayFiveSadness={this.state.dayFiveAverage.sadness}
 
-                dayFourAnger={this.state.dayFiveAverage.anger}
+                dayFourAnger={this.state.dayFourAverage.anger}
                 dayFourDisgust={this.state.dayFourAverage.disgust}
                 dayFourFear={this.state.dayFourAverage.fear}
                 dayFourJoy={this.state.dayFourAverage.joy}
                 dayFourSadness={this.state.dayFourAverage.sadness}
+
+                dayThreeAnger={this.state.dayThreeAverage.anger}
+                dayThreeDisgust={this.state.dayThreeAverage.disgust}
+                dayThreeFear={this.state.dayThreeAverage.fear}
+                dayThreeJoy={this.state.dayThreeAverage.joy}
+                dayThreeSadness={this.state.dayThreeAverage.sadness}
+
+                dayTwoAnger={this.state.dayTwoAverage.anger}
+                dayTwoDisgust={this.state.dayTwoAverage.disgust}
+                dayTwoFear={this.state.dayTwoAverage.fear}
+                dayTwoJoy={this.state.dayTwoAverage.joy}
+                dayTwoSadness={this.state.dayTwoAverage.sadness}
+
+                dayOneAnger={this.state.dayOneAverage.anger}
+                dayOneDisgust={this.state.dayOneAverage.disgust}
+                dayOneFear={this.state.dayOneAverage.fear}
+                dayOneJoy={this.state.dayOneAverage.joy}
+                dayOneSadness={this.state.dayOneAverage.sadness}
               />
             </div>
           </div>
