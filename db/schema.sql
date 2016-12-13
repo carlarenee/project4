@@ -2,6 +2,7 @@ BEGIN;
 
 DROP TABLE IF EXISTS users CASCADE;
 DROP TABLE IF EXISTS watson CASCADE;
+DROP TABLE IF EXISTS quotes CASCADE;
 
 
 CREATE TABLE users (
@@ -20,6 +21,12 @@ CREATE TABLE watson (
   joy_score VARCHAR,
   sadness_score VARCHAR,
   username VARCHAR REFERENCES users(username)
+);
+
+CREATE TABLE quotes (
+  quote TEXT,
+  author VARCHAR (255),
+  emotion VARCHAR (10)
 );
 
 

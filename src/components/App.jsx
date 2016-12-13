@@ -285,7 +285,7 @@ class App extends Component {
       }
 
       this.setState({
-        dayFiveAverage: {
+        dayFourAverage: {
           anger: (anger / scores4.length),
           disgust: (disgust / scores4.length),
           fear: (fear / scores4.length),
@@ -323,7 +323,7 @@ class App extends Component {
       }
 
       this.setState({
-        dayFiveAverage: {
+        dayThreeAverage: {
           anger: (anger / scores3.length),
           disgust: (disgust / scores3.length),
           fear: (fear / scores3.length),
@@ -361,7 +361,7 @@ class App extends Component {
       }
 
       this.setState({
-        dayFiveAverage: {
+        dayTwoAverage: {
           anger: (anger / scores2.length),
           disgust: (disgust / scores2.length),
           fear: (fear / scores2.length),
@@ -399,7 +399,7 @@ class App extends Component {
       }
 
       this.setState({
-        dayFiveAverage: {
+        dayOneAverage: {
           anger: (anger / scores1.length),
           disgust: (disgust / scores1.length),
           fear: (fear / scores1.length),
