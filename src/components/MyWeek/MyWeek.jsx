@@ -74,16 +74,47 @@ class MyWeek extends Component {
       backgroundColor: 'blue',
     }
 
+  ///Day 5 style
+    let angerStyle3 = {
+      height: this.props.dayFiveAnger * 100,
+      width: this.props.dayFiveAnger * 100,
+      borderRadius: (this.props.dayFiveAnger * 100) /2,
+      backgroundColor: 'red',
+    }
+
+    let disgustStyle3 = {
+      height: this.props.dayFiveDisgust * 100,
+      width: this.props.dayFiveDisgust * 100,
+      borderRadius: (this.props.dayFiveDisgust * 100) /2,
+      backgroundColor: 'green',
+    }
+
+    let fearStyle3 = {
+      height: this.props.dayFiveFear * 100,
+      width: this.props.dayFiveFear * 100,
+      borderRadius: (this.props.dayFiveFear * 100) /2,
+      backgroundColor: 'purple',
+    }
+
+    let joyStyle3 = {
+      height: this.props.dayFiveJoy * 100,
+      width: this.props.dayFiveJoy * 100,
+      borderRadius: (this.props.dayFiveJoy * 100) /2,
+      backgroundColor: 'yellow',
+    }
+
+    let sadnessStyle3 = {
+      height: this.props.dayFiveSadness * 100,
+      width: this.props.dayFiveSadness * 100,
+      borderRadius: (this.props.dayFiveSadness * 100) /2,
+      backgroundColor: 'blue',
+    }
+
 
     return (
       <div className="week">
         <h2>My Week: </h2>
-        <h4>Today</h4>
-        <p>Anger:{this.props.todayAnger}</p>
-        <p>Disgust:{this.props.todayDisgust}</p>
-        <p>Fear:{this.props.todayFear}</p>
-        <p>Joy:{this.props.todayJoy}</p>
-        <p>Sadness:{this.props.todaySadness}</p>
+
         <div className="day">
           <div className="dayContent" style={angerStyle}></div>
           <div className="dayContent" style={disgustStyle}></div>
@@ -91,6 +122,22 @@ class MyWeek extends Component {
           <div className="dayContent" style={joyStyle}></div>
           <div className="dayContent" style={sadnessStyle}></div>
         </div>
+        <div className="day">
+          <div className="dayContent" style={angerStyle2}></div>
+          <div className="dayContent" style={disgustStyle2}></div>
+          <div className="dayContent" style={fearStyle2}></div>
+          <div className="dayContent" style={joyStyle2}></div>
+          <div className="dayContent" style={sadnessStyle2}></div>
+        </div>
+
+        <div className="day">
+          <div className="dayContent" style={angerStyle3}></div>
+          <div className="dayContent" style={disgustStyle3}></div>
+          <div className="dayContent" style={fearStyle3}></div>
+          <div className="dayContent" style={joyStyle3}></div>
+          <div className="dayContent" style={sadnessStyle3}></div>
+        </div>
+
         <div className="day">
           <div className="dayContent" style={angerStyle2}></div>
           <div className="dayContent" style={disgustStyle2}></div>

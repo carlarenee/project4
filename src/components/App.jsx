@@ -39,6 +39,41 @@ class App extends Component {
         joy: '',
         sadness: '',
       },
+      dayFiveAverage: {
+        anger: '',
+        disgust: '',
+        fear: '',
+        joy: '',
+        sadness: '',
+      },
+      dayFourAverage: {
+        anger: '',
+        disgust: '',
+        fear: '',
+        joy: '',
+        sadness: '',
+      },
+      dayThreeAverage: {
+        anger: '',
+        disgust: '',
+        fear: '',
+        joy: '',
+        sadness: '',
+      },
+      dayTwoAverage: {
+        anger: '',
+        disgust: '',
+        fear: '',
+        joy: '',
+        sadness: '',
+      },
+      dayOneAverage: {
+        anger: '',
+        disgust: '',
+        fear: '',
+        joy: '',
+        sadness: '',
+      },
       signup: {
         username: '',
         password: '',
@@ -111,7 +146,7 @@ class App extends Component {
 
 
   getAverages(username) {
-  fetch(`/api/database/${this.state.username}`)
+  fetch(`/api/database/${this.state.username}/7`)
     .then(r => r.json())
     .then((scores) => {
       let anger= 0;
@@ -149,7 +184,7 @@ class App extends Component {
   }
 
   getDaySixAverages(username) {
-  fetch(`/api/database/${this.state.username}`)
+  fetch(`/api/database/${this.state.username}/6`)
     .then(r => r.json())
     .then((scores2) => {
       let anger= 0;
@@ -184,7 +219,94 @@ class App extends Component {
       });
     },
       );
+  }
+
+  getDayFiveAverages(username) {
+  fetch(`/api/database/${this.state.username}/5`)
+    .then(r => r.json())
+    .then((scores3) => {
+      let anger= 0;
+      for (let i = 0; i < scores3.length; i++) {
+        anger += parseFloat(scores3[i].anger_score);
+      }
+      let disgust= 0;
+      for (let i = 0; i < scores3.length; i++) {
+        disgust += parseFloat(scores3[i].disgust_score);
+      }
+      let fear= 0;
+      for (let i = 0; i < scores3.length; i++) {
+        fear += parseFloat(scores3[i].fear_score);
+      }
+      let joy= 0;
+      for (let i = 0; i < scores3.length; i++) {
+        joy += parseFloat(scores3[i].joy_score);
+      }
+      let sadness= 0;
+      for (let i = 0; i < scores3.length; i++) {
+        sadness += parseFloat(scores3[i].sadness_score);
+      }
+
+      this.setState({
+        dayFiveAverage: {
+          anger: (anger / scores3.length),
+          disgust: (disgust / scores3.length),
+          fear: (fear / scores3.length),
+          joy: (joy / scores3.length),
+          sadness: (sadness / scores3.length),
+        },
+      });
+    },
+      );
     console.log('yup', this.state.daySixAverage.anger);
+  }
+
+  getDayFourAverages(username) {
+  fetch(`/api/database/${this.state.username}/4`)
+    .then(r => r.json())
+    .then((scores4) => {
+      let anger= 0;
+      for (let i = 0; i < scores4.length; i++) {
+        anger += parseFloat(scores4[i].anger_score);
+      }
+      let disgust= 0;
+      for (let i = 0; i < scores4.length; i++) {
+        disgust += parseFloat(scores4[i].disgust_score);
+      }
+      let fear= 0;
+      for (let i = 0; i < scores4.length; i++) {
+        fear += parseFloat(scores4[i].fear_score);
+      }
+      let joy= 0;
+      for (let i = 0; i < scores4.length; i++) {
+        joy += parseFloat(scores4[i].joy_score);
+      }
+      let sadness= 0;
+      for (let i = 0; i < scores4.length; i++) {
+        sadness += parseFloat(scores4[i].sadness_score);
+      }
+
+      this.setState({
+        dayFiveAverage: {
+          anger: (anger / scores4.length),
+          disgust: (disgust / scores4.length),
+          fear: (fear / scores4.length),
+          joy: (joy / scores4.length),
+          sadness: (sadness / scores4.length),
+        },
+      });
+    },
+      );
+    console.log('yup', this.state.daySixAverage.anger);
+  }
+
+  handleAverages(username) {
+    this.getAverages(username);
+    this.getDaySixAverages(username);
+    this.getDayFiveAverages(username);
+    this.getDayFourAverages(username);
+    this.getDayThreeAverages(username);
+    this.getDayTwoAverages(username);
+    this.getDayOneAverages(username);
   }
 
 ////////////////////////////////////////User Auth from Pern React Template
@@ -318,8 +440,8 @@ class App extends Component {
                 opacitySadness={this.state.score.sadness}
               />
               <div className="options">
-              <button onClick={() => {this.getAverages(this.state.username)}}>get averages</button>
-              <button onClick={() => {this.getDaySixAverages(this.state.username)}}>get day 6 averages</button>
+              <button onClick={() => {this.handleAverages(this.state.username)}}>get averages</button>
+
                 <div>Quote of the Day</div>
                 <div>Song of the Day</div>
                 <div>Daily Challenge</div>
@@ -330,16 +452,27 @@ class App extends Component {
                 todayFear={this.state.daySevenAverage.fear}
                 todayJoy={this.state.daySevenAverage.joy}
                 todaySadness={this.state.daySevenAverage.sadness}
+
                 daySixAnger={this.state.daySixAverage.anger}
                 daySixDisgust={this.state.daySixAverage.disgust}
                 daySixFear={this.state.daySixAverage.fear}
                 daySixJoy={this.state.daySixAverage.joy}
                 daySixSadness={this.state.daySixAverage.sadness}
+
+                dayFiveAnger={this.state.dayFiveAverage.anger}
+                dayFiveDisgust={this.state.dayFiveAverage.disgust}
+                dayFiveFear={this.state.dayFiveAverage.fear}
+                dayFiveJoy={this.state.dayFiveAverage.joy}
+                dayFiveSadness={this.state.dayFiveAverage.sadness}
+
+                dayFourAnger={this.state.dayFiveAverage.anger}
+                dayFourDisgust={this.state.dayFourAverage.disgust}
+                dayFourFear={this.state.dayFourAverage.fear}
+                dayFourJoy={this.state.dayFourAverage.joy}
+                dayFourSadness={this.state.dayFourAverage.sadness}
               />
             </div>
           </div>
-
-
       </div>
     );
   }
