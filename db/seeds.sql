@@ -48,7 +48,8 @@ VALUES ('You will not be punished for your anger, you will be punished by your a
        ('Remembering that I''ll be dead soon is the most important tool I''ve ever encountered to help me make the big choices in life. Because almost everything - all external expectations, all pride, all fear of embarrassment or failure - these things just fall away in the face of death, leaving only what is truly important.', 'Steve Jobs', 'fear'),
        ('If you know the enemy and know yourself you need not fear the results of a hundred battles.', 'Sun Tzu', 'fear'),
        ('Being happy never goes out of style.', 'Lilly Pulitzer', 'joy'),
-       ('Don''t waste a minute not being happy. If one window closes, run to the next window or break down a door.', 'Brooke Shields', 'joy');
+       ('Don''t waste a minute not being happy. If one window closes, run to the next window or break down a door.', 'Brooke Shields', 'joy'),
+       ('Don''t be sad', 'Me', 'sadness');
 
        ('Speak when you''re angry, and you''ll make the best speech you''ll ever regret', 'Ambrose Bierce', 'anger'),
 
