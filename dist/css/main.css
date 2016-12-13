@@ -112,5 +112,33 @@
   width: 80px;
   height: 50px;
 }
+.week {
+  margin: 0 auto;
+  width: 50vw;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-end;
+  align-content: center;
+}
+
+.day {
+  margin-top: 15px;
+  margin: 0 auto;
+  width: 40vw;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-end;
+  align-content: center;
+}
+
+.dayContent {
+  position: relative;
+  width: 60px;
+  height: 60px;
+}
 
 /*# sourceMappingURL=main.css.map*/

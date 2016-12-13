@@ -330,6 +330,11 @@ class App extends Component {
                 todayFear={this.state.daySevenAverage.fear}
                 todayJoy={this.state.daySevenAverage.joy}
                 todaySadness={this.state.daySevenAverage.sadness}
+                daySixAnger={this.state.daySixAverage.anger}
+                daySixDisgust={this.state.daySixAverage.disgust}
+                daySixFear={this.state.daySixAverage.fear}
+                daySixJoy={this.state.daySixAverage.joy}
+                daySixSadness={this.state.daySixAverage.sadness}
               />
             </div>
           </div>

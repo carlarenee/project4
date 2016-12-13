@@ -25,7 +25,7 @@ db.any(`SELECT * FROM watson WHERE saved_on = current_date AND username = $1;`, 
 }
 
 function getDaySixScores(req, res, next) {
-db.any(`SELECT * FROM watson WHERE saved_on = current_date - 1 AND username = $1;`, [req.params.username])
+db.any(`SELECT * FROM watson WHERE saved_on = yesterday AND username = $1;`, [req.params.username])
 .then((scores2) => {
   res.scores2 = scores2;
   next();
