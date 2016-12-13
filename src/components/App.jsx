@@ -4,6 +4,7 @@ import SignUpForm from './SignUp/SignUpForm.jsx';
 import LogInForm from './Login/LogInForm.jsx';
 import Result from './Result/Result.jsx';
 import MyWeek from './MyWeek/MyWeek.jsx';
+import Quote from './Quote/Quote.jsx';
 
 class App extends Component {
 
@@ -558,6 +559,13 @@ class App extends Component {
                 <div>Song of the Day</div>
                 <div>Daily Challenge</div>
               </div>
+              <Quote
+                anger={this.state.score.anger}
+                disgust={this.state.score.disgust}
+                fear={this.state.score.fear}
+                joy={this.state.score.joy}
+                sadness={this.state.score.sadness}
+              />
               <MyWeek
                 todayAnger={this.state.daySevenAverage.anger}
                 todayDisgust={this.state.daySevenAverage.disgust}
