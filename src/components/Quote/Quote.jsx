@@ -5,12 +5,13 @@ import React, { Component } from 'react';
     constructor() {
     super();
 
-    this.state = {
-      bigScore: '',
+     this.state = {
+       bigScore: '',
+       quote: '',
     };
-  }
+    }
 
-    getQuotes() {
+    getEmotion() {
       let scores = [this.props.anger, this.props.disgust, this.props.fear, this.props.joy, this.props.sadness];
       let max = scores[0];
       let maxIndex = 0;
@@ -37,17 +38,36 @@ import React, { Component } from 'react';
         case 4:
           emotion = 'sadness';
           break;
-        }
-        this.setState ({
-          bigScore: emotion,
-        });
       }
+      this.setState({
+        bigScore: emotion,
+      })
+      this.getQuote(emotion)
+    }
+
+    getQuote(emotion) {
+      fetch(`api/feedback/quotes/${emotion}`)
+      .then(r => r.json())
+      .then((quote) => {
+      this.setState({
+        quote: quote[0].quote,
+      });
+      console.log(this.state.quote);
+      });
+    }
+
+
+
+    handleQuote() {
+      this.getEmotion();
+    }
 
     render() {
       return (
         <div>
-        <button onClick={() => this.getQuotes()}>get quote score</button>
-        <p>{this.state.bigScore}</p>
+          <button onClick={() => this.handleQuote()}>get quote score</button>
+          <p>{this.state.bigScore}</p>
+          <p>{this.state.quote}</p>
         </div>
       );
     }

@@ -3,7 +3,7 @@ const db = require('./db.js');
 function getAngerQuote(req, res, next) {
   db.many(`SELECT * FROM quotes WHERE emotion = 'anger';`)
   .then((anger) => {
-    res.anger = anger;
+    res.quote = anger;
     next();
   })
   .catch(error => next(error));
@@ -12,7 +12,7 @@ function getAngerQuote(req, res, next) {
 function getDisgustQuote(req, res, next) {
   db.many(`SELECT * FROM quotes WHERE emotion = 'disgust';`)
   .then((disgust) => {
-    res.disgust = disgust;
+    res.quote = disgust;
     next();
   })
   .catch(error => next(error));
@@ -21,7 +21,7 @@ function getDisgustQuote(req, res, next) {
 function getFearQuote(req, res, next) {
   db.many(`SELECT * FROM quotes WHERE emotion = 'fear';`)
   .then((fear) => {
-    res.fear = fear;
+    res.quote = fear;
     next();
   })
   .catch(error => next(error));
@@ -30,7 +30,7 @@ function getFearQuote(req, res, next) {
 function getJoyQuote(req, res, next) {
   db.many(`SELECT * FROM quotes WHERE emotion = 'joy';`)
   .then((joy) => {
-    res.joy = joy;
+    res.quote = joy;
     next();
   })
   .catch(error => next(error));
@@ -39,7 +39,7 @@ function getJoyQuote(req, res, next) {
 function getSadnessQuote(req, res, next) {
   db.many(`SELECT * FROM quotes WHERE emotion = 'sadness';`)
   .then((sadness) => {
-    res.sadness = sadness;
+    res.quote = sadness;
     next();
   })
   .catch(error => next(error));
