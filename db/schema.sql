@@ -24,6 +24,7 @@ CREATE TABLE watson (
 );
 
 CREATE TABLE quotes (
+  quote_id SERIAL,
   quote TEXT,
   author VARCHAR (255),
   emotion VARCHAR (10)

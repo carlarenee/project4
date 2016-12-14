@@ -24,7 +24,8 @@ VALUES ('2016-12-12', '0.144327', '0.174828', '0.11961', '0.143854', '0.482709',
 
 
 INSERT INTO quotes (quote, author, emotion)
-VALUES ('You will not be punished for your anger, you will be punished by your anger.', 'Buddha', 'anger'),
+VALUES ('Speak when you''re angry, and you''ll make the best speech you''ll ever regret', 'Ambrose Bierce', 'anger'),
+       ('You will not be punished for your anger, you will be punished by your anger.', 'Buddha', 'anger'),
        ('For every minute you remain angry, you give up sixty seconds of peace of mind.', 'Ralph Waldo Emerson', 'anger'),
        ('Anger is the enemy of non-violence and pride is a monster that swallows it up.', 'Mahatma Gandhi', 'anger'),
        ('Holding on to anger is like grasping a hot coal with the intent of throwing it at someone else; you are the one who gets burned.', 'Buddha', 'angry'),
@@ -51,7 +52,7 @@ VALUES ('You will not be punished for your anger, you will be punished by your a
        ('Don''t waste a minute not being happy. If one window closes, run to the next window or break down a door.', 'Brooke Shields', 'joy'),
        ('Don''t be sad', 'Me', 'sadness');
 
-       ('Speak when you''re angry, and you''ll make the best speech you''ll ever regret', 'Ambrose Bierce', 'anger'),
+
 
 
 

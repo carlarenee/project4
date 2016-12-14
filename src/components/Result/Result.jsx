@@ -14,33 +14,33 @@ class Result extends Component {
         position: 'relative',
         height: this.props.opacityAnger * 300,
         width: 80,
-        backgroundColor: 'red',
+        backgroundColor: '#9E034C',
       }
 
       let greenBox = {
         position: 'relative',
         height: this.props.opacityDisgust * 300,
         width: 80,
-        backgroundColor: 'green',
+        backgroundColor: '#439A86',
 
       }
       let purpleBox = {
         position: 'relative',
         height: this.props.opacityFear * 300,
         width: 80,
-        backgroundColor: 'rebeccaPurple',
+        backgroundColor: '#7278E8',
       }
       let yellowBox = {
         position: 'relative',
         height: this.props.opacityJoy * 300,
         width: 80,
-        backgroundColor: 'yellow',
+        backgroundColor: '#FFCD29',
       }
       let blueBox = {
         position: 'relative',
         height: this.props.opacitySadness * 300,
         width: 80,
-        backgroundColor: 'blue',
+        backgroundColor: '#00A5CF',
       }
 
     return (

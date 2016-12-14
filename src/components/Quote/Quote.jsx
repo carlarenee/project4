@@ -8,6 +8,7 @@ import React, { Component } from 'react';
      this.state = {
        bigScore: '',
        quote: '',
+       author: '',
     };
     }
 
@@ -50,7 +51,8 @@ import React, { Component } from 'react';
       .then(r => r.json())
       .then((quote) => {
       this.setState({
-        quote: quote[0].quote,
+        quote: quote.quote,
+        author: quote.author,
       });
       console.log(this.state.quote);
       });
@@ -65,9 +67,10 @@ import React, { Component } from 'react';
     render() {
       return (
         <div>
-          <button onClick={() => this.handleQuote()}>get quote score</button>
-          <p>{this.state.bigScore}</p>
+          <button onClick={() => this.handleQuote()}>Quote of the Day</button>
+          <p>That sounded full of: {this.state.bigScore}</p>
           <p>{this.state.quote}</p>
+          <p>{this.state.author}</p>
         </div>
       );
     }

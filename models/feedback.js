@@ -1,7 +1,7 @@
 const db = require('./db.js');
 
 function getAngerQuote(req, res, next) {
-  db.many(`SELECT * FROM quotes WHERE emotion = 'anger';`)
+  db.one(`SELECT * FROM quotes WHERE emotion = 'anger' ORDER BY RANDOM() LIMIT 1;`)
   .then((anger) => {
     res.quote = anger;
     next();
