@@ -10,7 +10,7 @@ function getAngerQuote(req, res, next) {
 }
 
 function getDisgustQuote(req, res, next) {
-  db.many(`SELECT * FROM quotes WHERE emotion = 'disgust';`)
+  db.one(`SELECT * FROM quotes WHERE emotion = 'disgust' ORDER BY RANDOM() LIMIT 1;`)
   .then((disgust) => {
     res.quote = disgust;
     next();
@@ -19,7 +19,7 @@ function getDisgustQuote(req, res, next) {
 }
 
 function getFearQuote(req, res, next) {
-  db.many(`SELECT * FROM quotes WHERE emotion = 'fear';`)
+  db.one(`SELECT * FROM quotes WHERE emotion = 'fear' ORDER BY RANDOM() LIMIT 1;`)
   .then((fear) => {
     res.quote = fear;
     next();
@@ -28,7 +28,7 @@ function getFearQuote(req, res, next) {
 }
 
 function getJoyQuote(req, res, next) {
-  db.many(`SELECT * FROM quotes WHERE emotion = 'joy';`)
+  db.one(`SELECT * FROM quotes WHERE emotion = 'joy' ORDER BY RANDOM() LIMIT 1;`)
   .then((joy) => {
     res.quote = joy;
     next();
@@ -37,7 +37,7 @@ function getJoyQuote(req, res, next) {
 }
 
 function getSadnessQuote(req, res, next) {
-  db.many(`SELECT * FROM quotes WHERE emotion = 'sadness';`)
+  db.one(`SELECT * FROM quotes WHERE emotion = 'sadness' ORDER BY RANDOM() LIMIT 1;`)
   .then((sadness) => {
     res.quote = sadness;
     next();

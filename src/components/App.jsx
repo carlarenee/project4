@@ -150,23 +150,23 @@ class App extends Component {
   fetch(`/api/database/${this.state.username}/7`)
     .then(r => r.json())
     .then((scores) => {
-      let anger= 0;
+      let anger = 0;
       for (let i = 0; i < scores.length; i++) {
         anger += parseFloat(scores[i].anger_score);
       }
-      let disgust= 0;
+      let disgust = 0;
       for (let i = 0; i < scores.length; i++) {
         disgust += parseFloat(scores[i].disgust_score);
       }
-      let fear= 0;
+      let fear = 0;
       for (let i = 0; i < scores.length; i++) {
         fear += parseFloat(scores[i].fear_score);
       }
-      let joy= 0;
+      let joy = 0;
       for (let i = 0; i < scores.length; i++) {
         joy += parseFloat(scores[i].joy_score);
       }
-      let sadness= 0;
+      let sadness = 0;
       for (let i = 0; i < scores.length; i++) {
         sadness += parseFloat(scores[i].sadness_score);
       }
@@ -188,23 +188,23 @@ class App extends Component {
   fetch(`/api/database/${this.state.username}/6`)
     .then(r => r.json())
     .then((scores2) => {
-      let anger= 0;
+      let anger = 0;
       for (let i = 0; i < scores2.length; i++) {
         anger += parseFloat(scores2[i].anger_score);
       }
-      let disgust= 0;
+      let disgust = 0;
       for (let i = 0; i < scores2.length; i++) {
         disgust += parseFloat(scores2[i].disgust_score);
       }
-      let fear= 0;
+      let fear = 0;
       for (let i = 0; i < scores2.length; i++) {
         fear += parseFloat(scores2[i].fear_score);
       }
-      let joy= 0;
+      let joy = 0;
       for (let i = 0; i < scores2.length; i++) {
         joy += parseFloat(scores2[i].joy_score);
       }
-      let sadness= 0;
+      let sadness = 0;
       for (let i = 0; i < scores2.length; i++) {
         sadness += parseFloat(scores2[i].sadness_score);
       }
@@ -226,23 +226,23 @@ class App extends Component {
   fetch(`/api/database/${this.state.username}/5`)
     .then(r => r.json())
     .then((scores3) => {
-      let anger= 0;
+      let anger = 0;
       for (let i = 0; i < scores3.length; i++) {
         anger += parseFloat(scores3[i].anger_score);
       }
-      let disgust= 0;
+      let disgust = 0;
       for (let i = 0; i < scores3.length; i++) {
         disgust += parseFloat(scores3[i].disgust_score);
       }
-      let fear= 0;
+      let fear = 0;
       for (let i = 0; i < scores3.length; i++) {
         fear += parseFloat(scores3[i].fear_score);
       }
-      let joy= 0;
+      let joy = 0;
       for (let i = 0; i < scores3.length; i++) {
         joy += parseFloat(scores3[i].joy_score);
       }
-      let sadness= 0;
+      let sadness = 0;
       for (let i = 0; i < scores3.length; i++) {
         sadness += parseFloat(scores3[i].sadness_score);
       }
@@ -264,23 +264,23 @@ class App extends Component {
   fetch(`/api/database/${this.state.username}/4`)
     .then(r => r.json())
     .then((scores4) => {
-      let anger= 0;
+      let anger = 0;
       for (let i = 0; i < scores4.length; i++) {
         anger += parseFloat(scores4[i].anger_score);
       }
-      let disgust= 0;
+      let disgust = 0;
       for (let i = 0; i < scores4.length; i++) {
         disgust += parseFloat(scores4[i].disgust_score);
       }
-      let fear= 0;
+      let fear = 0;
       for (let i = 0; i < scores4.length; i++) {
         fear += parseFloat(scores4[i].fear_score);
       }
-      let joy= 0;
+      let joy = 0;
       for (let i = 0; i < scores4.length; i++) {
         joy += parseFloat(scores4[i].joy_score);
       }
-      let sadness= 0;
+      let sadness = 0;
       for (let i = 0; i < scores4.length; i++) {
         sadness += parseFloat(scores4[i].sadness_score);
       }
@@ -302,23 +302,23 @@ class App extends Component {
   fetch(`/api/database/${this.state.username}/3`)
     .then(r => r.json())
     .then((scores3) => {
-      let anger= 0;
+      let anger = 0;
       for (let i = 0; i < scores3.length; i++) {
         anger += parseFloat(scores3[i].anger_score);
       }
-      let disgust= 0;
+      let disgust = 0;
       for (let i = 0; i < scores3.length; i++) {
         disgust += parseFloat(scores3[i].disgust_score);
       }
-      let fear= 0;
+      let fear = 0;
       for (let i = 0; i < scores3.length; i++) {
         fear += parseFloat(scores3[i].fear_score);
       }
-      let joy= 0;
+      let joy = 0;
       for (let i = 0; i < scores3.length; i++) {
         joy += parseFloat(scores3[i].joy_score);
       }
-      let sadness= 0;
+      let sadness = 0;
       for (let i = 0; i < scores3.length; i++) {
         sadness += parseFloat(scores3[i].sadness_score);
       }
@@ -340,23 +340,23 @@ class App extends Component {
   fetch(`/api/database/${this.state.username}/2`)
     .then(r => r.json())
     .then((scores2) => {
-      let anger= 0;
+      let anger = 0;
       for (let i = 0; i < scores2.length; i++) {
         anger += parseFloat(scores2[i].anger_score);
       }
-      let disgust= 0;
+      let disgust = 0;
       for (let i = 0; i < scores2.length; i++) {
         disgust += parseFloat(scores2[i].disgust_score);
       }
-      let fear= 0;
+      let fear = 0;
       for (let i = 0; i < scores2.length; i++) {
         fear += parseFloat(scores2[i].fear_score);
       }
-      let joy= 0;
+      let joy = 0;
       for (let i = 0; i < scores2.length; i++) {
         joy += parseFloat(scores2[i].joy_score);
       }
-      let sadness= 0;
+      let sadness = 0;
       for (let i = 0; i < scores2.length; i++) {
         sadness += parseFloat(scores2[i].sadness_score);
       }
@@ -378,23 +378,23 @@ class App extends Component {
   fetch(`/api/database/${this.state.username}/1`)
     .then(r => r.json())
     .then((scores1) => {
-      let anger= 0;
+      let anger = 0;
       for (let i = 0; i < scores1.length; i++) {
         anger += parseFloat(scores1[i].anger_score);
       }
-      let disgust= 0;
+      let disgust = 0;
       for (let i = 0; i < scores1.length; i++) {
         disgust += parseFloat(scores1[i].disgust_score);
       }
-      let fear= 0;
+      let fear = 0;
       for (let i = 0; i < scores1.length; i++) {
         fear += parseFloat(scores1[i].fear_score);
       }
-      let joy= 0;
+      let joy = 0;
       for (let i = 0; i < scores1.length; i++) {
         joy += parseFloat(scores1[i].joy_score);
       }
-      let sadness= 0;
+      let sadness = 0;
       for (let i = 0; i < scores1.length; i++) {
         sadness += parseFloat(scores1[i].sadness_score);
       }
@@ -422,7 +422,7 @@ class App extends Component {
     this.getDayOneAverages(username);
   }
 
-////////////////////////////////////////User Auth from Pern React Template
+// User Auth from Pern React Template
   updateFormSignUpUsername(e) {
     console.log(e.target.value);
     this.setState({
@@ -515,7 +515,6 @@ class App extends Component {
   alertInfo(msg) {
     alert(msg);
   }
-///////////////////////////////////////////////////////////////////////
 
   render() {
     return (
@@ -555,9 +554,6 @@ class App extends Component {
               <div className="options">
               <button onClick={() => {this.handleAverages(this.state.username)}}>get averages</button>
 
-                <div>Quote of the Day</div>
-                <div>Song of the Day</div>
-                <div>Daily Challenge</div>
               </div>
               <Quote
                 anger={this.state.score.anger}
