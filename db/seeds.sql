@@ -2,9 +2,9 @@
 INSERT INTO users (username, password) VALUES ('carla', '123');
 
 INSERT INTO watson (saved_on, anger_score, disgust_score, fear_score, joy_score, sadness_score, username)
-VALUES ('2016-12-15', '0.2145657', '0.787528', '0.99961', '0.873854', '0.9082709', 'carla'),
-       ('2016-12-14', '0.142021', '0.209965', '0.430666', '0.298084', '0.268845', 'carla'),
-       ('2016-12-13', '0.437327', '0.456828', '0.98761', '0.893854', '0.482709', 'carla'),
+VALUES
+       ('2016-12-14', '0.142021', '0.209965', '0.030666', '0.0798084', '0.0568845', 'carla'),
+       ('2016-12-13', '0.437327', '0.456828', '0.048761', '0.033854', '0.482709', 'carla'),
        ('2016-12-12', '0.144327', '0.174828', '0.44961', '0.143854', '0.482709', 'carla'),
        ('2016-12-12', '0.144327', '0.174828', '0.11961', '0.143854', '0.482709', 'carla'),
        ('2016-12-11', '0.542021', '0.109965', '0.080666', '0.098084', '0.268845', 'carla'),
@@ -17,9 +17,9 @@ VALUES ('2016-12-15', '0.2145657', '0.787528', '0.99961', '0.873854', '0.9082709
 INSERT INTO users (username, password) VALUES ('jo', '123');
 
 INSERT INTO watson (saved_on, anger_score, disgust_score, fear_score, joy_score, sadness_score, username)
-VALUES ('2016-12-15', '0.3245657', '0.567528', '0.32961', '0.233854', '0.1282709', 'jo'),
+VALUES
        ('2016-12-14', '0.142021', '0.209965', '0.430666', '0.298084', '0.268845', 'jo'),
-       ('2016-12-13', '0.437327', '0.456828', '0.98761', '0.893854', '0.482709', 'jo'),
+       ('2016-12-13', '0.037327', '0.026828', '0.12761', '0.213854', '0.482709', 'jo'),
        ('2016-12-12', '0.144327', '0.174828', '0.44961', '0.143854', '0.482709', 'jo'),
        ('2016-12-11', '0.542021', '0.109965', '0.080666', '0.098084', '0.268845', 'jo'),
        ('2016-12-10', '0.144327', '0.174828', '0.11961', '0.143854', '0.482709', 'jo'),
@@ -31,9 +31,9 @@ VALUES ('2016-12-15', '0.3245657', '0.567528', '0.32961', '0.233854', '0.1282709
 INSERT INTO users (username, password) VALUES ('bo', '123');
 
 INSERT INTO watson (saved_on, anger_score, disgust_score, fear_score, joy_score, sadness_score, username)
-VALUES ('2016-12-15', '0.324327', '0.567828', '0.11961', '0.643854', '0.8982709', 'bo'),
+VALUES
        ('2016-12-14', '0.342021', '0.109965', '0.080666', '0.098084', '0.268845', 'bo'),
-       ('2016-12-13', '0.777327', '0.674828', '0.98761', '0.893854', '0.482709', 'bo'),
+       ('2016-12-13', '0.077327', '0.174828', '0.12761', '0.013854', '0.122709', 'bo'),
        ('2016-12-12', '0.144327', '0.174828', '0.11961', '0.143854', '0.482709', 'bo'),
        ('2016-12-11', '0.542021', '0.109965', '0.080666', '0.098084', '0.268845', 'bo'),
        ('2016-12-10', '0.144327', '0.174828', '0.11961', '0.143854', '0.482709', 'bo'),
@@ -82,7 +82,7 @@ VALUES ('Speak when you''re angry, and you''ll make the best speech you''ll ever
        ('The good times of today, are the sad thoughts of tomorrow.', 'Bob Marley', 'sadness'),
        ('It''s sad to know I''m done. But looking back, I''ve got a lot of great memories.', 'Bonnie Blair', 'sadness'),
        ('First, accept sadness. Realize that without losing, winning isn''t so great.', 'Alyssa Milano', 'sadness'),
-       ('The word ''happy'' would lose its meaning if it were not balanced by sadness.', 'Carl Jung', 'sadness')
+       ('The word ''happy'' would lose its meaning if it were not balanced by sadness.', 'Carl Jung', 'sadness'),
        ('Your pain is the breaking of the shell that encloses your understanding.', 'Khalil Gibran', 'sadness'),
        ('Affliction comes to us, not to make us sad but sober; not to make us sorry but wise.', 'H. G. Wells', 'sadness'),
        ('The rose and the thorn, and sorrow and gladness are linked together.', 'Saadi', 'sadness'),

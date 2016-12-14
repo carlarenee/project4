@@ -12,7 +12,7 @@
     "watch": "webpack -d --progress --watch"
   },
   "engines": {
-    "node": "7.0.0"
+    "node": "7.2.1"
   },
   "repository": {
     "type": "git",

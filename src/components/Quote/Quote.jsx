@@ -58,8 +58,6 @@ import React, { Component } from 'react';
       });
     }
 
-
-
     handleQuote() {
       this.getEmotion();
     }
@@ -68,9 +66,9 @@ import React, { Component } from 'react';
       return (
         <div>
           <button onClick={() => this.handleQuote()}>Quote of the Day</button>
-          <p>That sounded full of: {this.state.bigScore}</p>
-          <p>{this.state.quote}</p>
-          <p>{this.state.author}</p>
+          <p className={this.props.soundsLike}>Sounds like you have some {this.state.bigScore}</p>
+          <p>"{this.state.quote}"</p>
+          <p>- {this.state.author}</p>
         </div>
       );
     }

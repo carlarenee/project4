@@ -94,6 +94,7 @@ class App extends Component {
       animationContainer: 'hidden',
       week: 'hidden',
       emotionLabelsContainer: 'hidden',
+      soundsLike: 'hidden',
     };
   }
 
@@ -148,7 +149,10 @@ class App extends Component {
   handleSubmit(anger, disgust, fear, joy, sadness, username) {
     this.getWatsonData();
     setTimeout(() => { this.saveWatsonData(anger, disgust, fear, joy, sadness, username); }, 3000);
-    this.setState({ emotionLabelsContainer: 'emotionLabelsContainer' })
+    this.setState({
+      emotionLabelsContainer: 'emotionLabelsContainer',
+      soundsLike: 'soundsLike',
+    })
   }
 
 
@@ -561,9 +565,9 @@ class App extends Component {
 
           <div className={this.state.bigContainer}>
             <div className="bigContainerContent">
-              <h1>The Weather Report</h1>
-              <h3>Hi, {this.state.username}</h3>
-              <h2>what is on your mind?</h2>
+
+              <h2>Hi, {this.state.username}.</h2>
+              <h3>What's on your mind?</h3>
               <input className="inputBox" type="text" name="userInput" onChange={(e) => this.updateInput(e)} />
               <input type="submit" value="submit" onClick={() => this.handleSubmit(this.state.score.anger, this.state.score.disgust, this.state.score.fear, this.state.score.joy, this.state.score.sadness, this.state.username)} />
 
@@ -581,6 +585,7 @@ class App extends Component {
 
               </div>
               <Quote
+                soundsLike={this.state.soundsLike}
                 anger={this.state.score.anger}
                 disgust={this.state.score.disgust}
                 fear={this.state.score.fear}
