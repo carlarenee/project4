@@ -260,13 +260,45 @@ class MyWeek extends Component {
     return (
       <div className="week">
         <h2>My Week: </h2>
-
         <div className="day">
-          <div className="dayContent" style={angerStyle}></div>
-          <div className="dayContent" style={disgustStyle}></div>
-          <div className="dayContent" style={fearStyle}></div>
-          <div className="dayContent" style={joyStyle}></div>
-          <div className="dayContent" style={sadnessStyle}></div>
+          <div className="dayContent" style={angerStyle7}></div>
+          <div className="dayContent" style={disgustStyle7}></div>
+          <div className="dayContent" style={fearStyle7}></div>
+          <div className="dayContent" style={joyStyle7}></div>
+          <div className="dayContent" style={sadnessStyle7}></div>
+          <h4>7 Days Ago</h4>
+        </div>
+        <div className="day">
+          <div className="dayContent" style={angerStyle6}></div>
+          <div className="dayContent" style={disgustStyle6}></div>
+          <div className="dayContent" style={fearStyle6}></div>
+          <div className="dayContent" style={joyStyle6}></div>
+          <div className="dayContent" style={sadnessStyle6}></div>
+          <h4>6 Days Ago</h4>
+        </div>
+        <div className="day">
+          <div className="dayContent" style={angerStyle5}></div>
+          <div className="dayContent" style={disgustStyle5}></div>
+          <div className="dayContent" style={fearStyle5}></div>
+          <div className="dayContent" style={joyStyle5}></div>
+          <div className="dayContent" style={sadnessStyle5}></div>
+          <h4>5 Days Ago</h4>
+        </div>
+        <div className="day">
+          <div className="dayContent" style={angerStyle4}></div>
+          <div className="dayContent" style={disgustStyle4}></div>
+          <div className="dayContent" style={fearStyle4}></div>
+          <div className="dayContent" style={joyStyle4}></div>
+          <div className="dayContent" style={sadnessStyle4}></div>
+          <h4>4 Days Ago</h4>
+        </div>
+        <div className="day">
+          <div className="dayContent" style={angerStyle3}></div>
+          <div className="dayContent" style={disgustStyle3}></div>
+          <div className="dayContent" style={fearStyle3}></div>
+          <div className="dayContent" style={joyStyle3}></div>
+          <div className="dayContent" style={sadnessStyle3}></div>
+          <h4>3 Days Ago</h4>
         </div>
         <div className="day">
           <div className="dayContent" style={angerStyle2}></div>
@@ -274,46 +306,15 @@ class MyWeek extends Component {
           <div className="dayContent" style={fearStyle2}></div>
           <div className="dayContent" style={joyStyle2}></div>
           <div className="dayContent" style={sadnessStyle2}></div>
+          <h4>Yesterday</h4>
         </div>
-
         <div className="day">
-          <div className="dayContent" style={angerStyle3}></div>
-          <div className="dayContent" style={disgustStyle3}></div>
-          <div className="dayContent" style={fearStyle3}></div>
-          <div className="dayContent" style={joyStyle3}></div>
-          <div className="dayContent" style={sadnessStyle3}></div>
-        </div>
-
-        <div className="day">
-          <div className="dayContent" style={angerStyle4}></div>
-          <div className="dayContent" style={disgustStyle4}></div>
-          <div className="dayContent" style={fearStyle4}></div>
-          <div className="dayContent" style={joyStyle4}></div>
-          <div className="dayContent" style={sadnessStyle4}></div>
-        </div>
-
-        <div className="day">
-          <div className="dayContent" style={angerStyle5}></div>
-          <div className="dayContent" style={disgustStyle5}></div>
-          <div className="dayContent" style={fearStyle5}></div>
-          <div className="dayContent" style={joyStyle5}></div>
-          <div className="dayContent" style={sadnessStyle5}></div>
-        </div>
-
-        <div className="day">
-          <div className="dayContent" style={angerStyle6}></div>
-          <div className="dayContent" style={disgustStyle6}></div>
-          <div className="dayContent" style={fearStyle6}></div>
-          <div className="dayContent" style={joyStyle6}></div>
-          <div className="dayContent" style={sadnessStyle6}></div>
-        </div>
-
-        <div className="day">
-          <div className="dayContent" style={angerStyle7}></div>
-          <div className="dayContent" style={disgustStyle7}></div>
-          <div className="dayContent" style={fearStyle7}></div>
-          <div className="dayContent" style={joyStyle7}></div>
-          <div className="dayContent" style={sadnessStyle7}></div>
+          <div className="dayContent" style={angerStyle}></div>
+          <div className="dayContent" style={disgustStyle}></div>
+          <div className="dayContent" style={fearStyle}></div>
+          <div className="dayContent" style={joyStyle}></div>
+          <div className="dayContent" style={sadnessStyle}></div>
+          <h4>Today</h4>
         </div>
       </div>
     );

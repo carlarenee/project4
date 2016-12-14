@@ -7,7 +7,7 @@ function saveFeedback(req, res, next) {
 }
 
 function getDailyScores(req, res, next) {
-db.any(`SELECT * FROM watson WHERE saved_on = current_date AND username = $1;`, [req.params.username])
+db.any(`SELECT * FROM watson WHERE saved_on = current_date - 1 AND username = $1;`, [req.params.username])
 .then((scores) => {
   res.scores = scores;
   next();
@@ -16,7 +16,7 @@ db.any(`SELECT * FROM watson WHERE saved_on = current_date AND username = $1;`, 
 }
 
 function getDaySixScores(req, res, next) {
-db.any(`SELECT * FROM watson WHERE saved_on = current_date - 1 AND username = $1;`, [req.params.username])
+db.any(`SELECT * FROM watson WHERE saved_on = current_date - 2 AND username = $1;`, [req.params.username])
 .then((scores6) => {
   res.scores6 = scores6;
   next();
@@ -25,7 +25,7 @@ db.any(`SELECT * FROM watson WHERE saved_on = current_date - 1 AND username = $1
 }
 
 function getDayFiveScores(req, res, next) {
-db.any(`SELECT * FROM watson WHERE saved_on = current_date - 2 AND username = $1;`, [req.params.username])
+db.any(`SELECT * FROM watson WHERE saved_on = current_date - 3 AND username = $1;`, [req.params.username])
 .then((scores5) => {
   res.scores5 = scores5;
   next();
@@ -34,7 +34,7 @@ db.any(`SELECT * FROM watson WHERE saved_on = current_date - 2 AND username = $1
 }
 
 function getDayFourScores(req, res, next) {
-db.any(`SELECT * FROM watson WHERE saved_on = current_date - 3 AND username = $1;`, [req.params.username])
+db.any(`SELECT * FROM watson WHERE saved_on = current_date - 4 AND username = $1;`, [req.params.username])
 .then((scores4) => {
   res.scores4 = scores4;
   next();
@@ -43,7 +43,7 @@ db.any(`SELECT * FROM watson WHERE saved_on = current_date - 3 AND username = $1
 }
 
 function getDayThreeScores(req, res, next) {
-db.any(`SELECT * FROM watson WHERE saved_on = current_date - 4 AND username = $1;`, [req.params.username])
+db.any(`SELECT * FROM watson WHERE saved_on = current_date - 5 AND username = $1;`, [req.params.username])
 .then((scores3) => {
   res.scores3 = scores3;
   next();
@@ -52,7 +52,7 @@ db.any(`SELECT * FROM watson WHERE saved_on = current_date - 4 AND username = $1
 }
 
 function getDayTwoScores(req, res, next) {
-db.any(`SELECT * FROM watson WHERE saved_on = current_date - 5 AND username = $1;`, [req.params.username])
+db.any(`SELECT * FROM watson WHERE saved_on = current_date - 6 AND username = $1;`, [req.params.username])
 .then((scores2) => {
   res.scores2 = scores2;
   next();
@@ -61,7 +61,7 @@ db.any(`SELECT * FROM watson WHERE saved_on = current_date - 5 AND username = $1
 }
 
 function getDayOneScores(req, res, next) {
-db.any(`SELECT * FROM watson WHERE saved_on = current_date - 6 AND username = $1;`, [req.params.username])
+db.any(`SELECT * FROM watson WHERE saved_on = current_date - 7 AND username = $1;`, [req.params.username])
 .then((scores1) => {
   res.scores1 = scores1;
   next();
