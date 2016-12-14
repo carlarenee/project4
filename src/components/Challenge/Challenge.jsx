@@ -1,16 +1,17 @@
 import React, { Component } from 'react';
+import LetsBreathe from './LetsBreathe.mp4';
 
 class Challenge extends Component {
 
   render() {
     return(
       <div className={this.props.animationContainer}>
-        <iframe
-          src="https://publish.animatron.io/5851897861c85a17d6744c12?c=1&w=720&h=405&r=0&a=0"
-          width="720"
-          height="800"
-          position="relative"
-        />
+        <video width="720" height="405" controls>
+          <source src={LetsBreathe} type="video/mp4" />
+          <source src={LetsBreathe} type="video/ogg" />
+          Your browser does not support the video tag.
+        </video>
+
       </div>
     );
   }

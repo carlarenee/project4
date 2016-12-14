@@ -9,9 +9,11 @@ import React, { Component } from 'react';
        bigScore: '',
        quote: '',
        author: '',
-    };
+       quoteBox: 'hidden',
+     };
     }
 
+    // Calculate emotion with the highest score
     getEmotion() {
       let scores = [this.props.anger, this.props.disgust, this.props.fear, this.props.joy, this.props.sadness];
       let max = scores[0];
@@ -42,10 +44,11 @@ import React, { Component } from 'react';
       }
       this.setState({
         bigScore: emotion,
-      })
-      this.getQuote(emotion)
+      });
+      this.getQuote(emotion);
     }
 
+    // Fetch call to database to retrieve quote based on emotion with biggest score
     getQuote(emotion) {
       fetch(`api/feedback/quotes/${emotion}`)
       .then(r => r.json())
@@ -60,15 +63,17 @@ import React, { Component } from 'react';
 
     handleQuote() {
       this.getEmotion();
+      this.setState({ qutoeBox: 'quoteBox' });
     }
 
     render() {
       return (
         <div>
           <button onClick={() => this.handleQuote()}>Quote of the Day</button>
-          <p className={this.props.soundsLike}>Sounds like you have some {this.state.bigScore}</p>
-          <p>"{this.state.quote}"</p>
-          <p>- {this.state.author}</p>
+          <div className={this.state.quoteBox}>
+            <p>{this.state.quote}</p>
+            <p>{this.state.author}</p>
+          </div>
         </div>
       );
     }

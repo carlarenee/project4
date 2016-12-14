@@ -87,10 +87,19 @@
 }
 
 .animationContainer {
-  position: absolute;
+  margin-top: 45%;
+  text-align: center;
   margin: 0 auto;
 }
 
 .soundsLike {
 
 }
+
+.quoteBox {
+  display: block;
+  height: 10vh;
+  background-color: gray;
+}
+
+
