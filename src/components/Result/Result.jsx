@@ -53,7 +53,7 @@ class Result extends Component {
         <div style={blueBox}></div>
         </div>
 
-        <div className="emotionLabelsContainer">
+        <div className={this.props.emotionLabelsContainer}>
           <div className="emotionLabel">ANGER</div>
           <div className="emotionLabel">DISGUST</div>
           <div className="emotionLabel">FEAR</div>

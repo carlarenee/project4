@@ -11,16 +11,20 @@
 }
 
 .day {
+  padding: 10px;
   margin-top: 15px;
   margin: 0 auto;
   width: 10vw;
   height: 10vh;
+  border-radius: 10px;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: flex-end;
   align-content: center;
+  box-shadow: 3px 5px 5px #888888;
+  box-sizing: border-box;
 }
 
 .dayContent {

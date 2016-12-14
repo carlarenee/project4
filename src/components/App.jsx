@@ -5,6 +5,7 @@ import LogInForm from './Login/LogInForm.jsx';
 import Result from './Result/Result.jsx';
 import MyWeek from './MyWeek/MyWeek.jsx';
 import Quote from './Quote/Quote.jsx';
+import Challenge from './Challenge/Challenge.jsx';
 
 class App extends Component {
 
@@ -89,6 +90,9 @@ class App extends Component {
       bigContainer: 'hidden',
       signUpBoxDisplay: 'signUpBox',
       logInBoxDisplay: 'hidden',
+      animationContainer: 'hidden',
+      week: 'hidden',
+      emotionLabelsContainer: 'hidden',
     };
   }
 
@@ -143,6 +147,7 @@ class App extends Component {
   handleSubmit(anger, disgust, fear, joy, sadness, username) {
     this.getWatsonData();
     setTimeout(() => { this.saveWatsonData(anger, disgust, fear, joy, sadness, username); }, 3000);
+    this.setState({ emotionLabelsContainer: 'emotionLabelsContainer' })
   }
 
 
@@ -420,6 +425,7 @@ class App extends Component {
     this.getDayThreeAverages(username);
     this.getDayTwoAverages(username);
     this.getDayOneAverages(username);
+    this.setState({ week: 'week'  });
   }
 
 // User Auth from Pern React Template
@@ -545,6 +551,7 @@ class App extends Component {
               <input type="submit" value="submit" onClick={() => this.handleSubmit(this.state.score.anger, this.state.score.disgust, this.state.score.fear, this.state.score.joy, this.state.score.sadness, this.state.username)} />
 
               <Result
+                emotionLabelsContainer={this.state.emotionLabelsContainer}
                 opacityAnger={this.state.score.anger}
                 opacityDisgust={this.state.score.disgust}
                 opacityFear={this.state.score.fear}
@@ -563,6 +570,7 @@ class App extends Component {
                 sadness={this.state.score.sadness}
               />
               <MyWeek
+                week={this.state.week}
                 todayAnger={this.state.daySevenAverage.anger}
                 todayDisgust={this.state.daySevenAverage.disgust}
                 todayFear={this.state.daySevenAverage.fear}
@@ -605,6 +613,7 @@ class App extends Component {
                 dayOneJoy={this.state.dayOneAverage.joy}
                 dayOneSadness={this.state.dayOneAverage.sadness}
               />
+              <Challenge animationContainer={this.state.animationContainer}/>
             </div>
           </div>
       </div>
