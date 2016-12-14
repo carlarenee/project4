@@ -6,6 +6,7 @@ import Result from './Result/Result.jsx';
 import MyWeek from './MyWeek/MyWeek.jsx';
 import Quote from './Quote/Quote.jsx';
 import Challenge from './Challenge/Challenge.jsx';
+import Leaf from './images/leaf.jpg';
 
 class App extends Component {
 
@@ -428,6 +429,22 @@ class App extends Component {
     this.setState({ week: 'week'  });
   }
 
+  handleAnimation() {
+    this.setState({
+      animationContainer: 'animationContainer',
+      bigContainerContent: 'hidden',
+      bigContainer: 'hidden',
+    });
+  }
+
+  closeChallenge() {
+    this.setState({
+      animationContainer: 'hidden',
+      bigContainer: 'bigContainer',
+      bigContainerContent: 'bigContainerContent'
+    })
+  }
+
 // User Auth from Pern React Template
   updateFormSignUpUsername(e) {
     console.log(e.target.value);
@@ -560,6 +577,7 @@ class App extends Component {
               />
               <div className="options">
               <button onClick={() => {this.handleAverages(this.state.username)}}>get averages</button>
+              <button onClick={() => {this.handleAnimation()}}>DailyChallenge</button>
 
               </div>
               <Quote
@@ -613,9 +631,10 @@ class App extends Component {
                 dayOneJoy={this.state.dayOneAverage.joy}
                 dayOneSadness={this.state.dayOneAverage.sadness}
               />
-              <Challenge animationContainer={this.state.animationContainer}/>
             </div>
           </div>
+              <button onClick={() => {this.closeChallenge()}}>Close Chanllenge</button>
+              <Challenge animationContainer={this.state.animationContainer}/>
       </div>
     );
   }

@@ -26,16 +26,20 @@
   "homepage": "https://github.com/carlarenee/project4#readme",
   "dependencies": {
     "body-parser": "^1.15.2",
+    "bower": "^1.8.0",
     "cookie-parser": "^1.4.3",
     "express": "^4.14.0",
+    "install": "^0.8.2",
     "jsonwebtoken": "^7.1.9",
     "morgan": "^1.7.0",
     "node-fetch": "^1.6.3",
+    "or": "^0.2.0",
     "passport": "^0.3.2",
     "passport-jwt": "^2.2.1",
     "passport-local": "^1.0.0",
     "path": "^0.12.7",
     "pg-promise": "^5.2.7",
+    "react-html5video": "^1.4.0",
     "watson-developer-cloud": "^2.11.0"
   },
   "devDependencies": {

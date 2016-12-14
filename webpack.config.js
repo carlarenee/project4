@@ -61,6 +61,6 @@ module.exports = {
       { test: /\.png$/,
         loader: 'file-loader?name=/img/[name].[hash:base64:5].[ext]'
       },
-    ]
-  }
+    ],
+  },
 };
