@@ -43,6 +43,11 @@ Also, I underestimated the amount of time it would take to make video animations
 
 I need to seed my database with more quotes. I want to make a library of daily challenge materials.
 
-![wireframe 1](images/wecomePageWireframe.png)
+![wireframe 1](https://github.com/carlarenee/project4/blob/master/images/Wireframe1.png)
+![wireframe 1](https://github.com/carlarenee/project4/blob/master/images/Wireframe2.png)
 
 ![screenshot](https://github.com/carlarenee/project4/blob/master/images/Screen%20Shot%202016-12-15%20at%208.58.23%20AM.png)
+![screenshot](https://github.com/carlarenee/project4/blob/master/images/Screen%20Shot%202016-12-15%20at%208.58.35%20AM.png)
+![screenshot](https://github.com/carlarenee/project4/blob/master/images/Screen%20Shot%202016-12-15%20at%208.59.05%20AM.png)
+![screenshot](https://github.com/carlarenee/project4/blob/master/images/Screen%20Shot%202016-12-15%20at%208.59.16%20AM.png)
+![screenshot](https://github.com/carlarenee/project4/blob/master/images/Screen%20Shot%202016-12-15%20at%209.00.07%20AM.png)
