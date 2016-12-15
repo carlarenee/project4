@@ -14,6 +14,11 @@ Post input to Watson Tone Analyzer API.
 Grab output from Watson API and render analytics for user.
 Based on analytics, send quote or exercise (stored in database) back to user.
 
+## Technology Used 
+
+Node / Express / React / PSQL / HTML / CSS / Javascript
+Videos were made using Animatron.com and exported as MP4's. 
+
 ## App Add On Ideas
 
 In addition to a quote or exercise, provide user with mood over time analytics to see patterns.
@@ -23,15 +28,9 @@ In addition to a quote or exercise, provide user with mood over time analytics t
 
 As a new developer, I'm really interested in the ways people interface with technology in small, day to day interactions. How can an app change your day? 
 
-## Installation
-
-I intend to build the app using: 
-Backend: Node/Express 
-Frontend: React
-
 ## API Reference
 
-Watson Tone Analyzer
+IBM Watson Tone Analyzer
 
 ## Hurdles
 
