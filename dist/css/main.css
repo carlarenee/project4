@@ -97,9 +97,17 @@
 }
 
 .quoteBox {
-  display: block;
-  height: 10vh;
-  background-color: gray;
+  border-radius: 15px;
+  color: #f2f2f2;
+  padding: 10px;
+  padding-top: 25px;
+  font-size: 1.2em;
+  line-height: 1.2em;
+  position: relative;
+  height: 20vh;
+  width: 100%;
+  background-color: #00A5CF;
+  bottom: 0;
 }
 
 

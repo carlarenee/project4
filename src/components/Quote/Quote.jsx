@@ -63,7 +63,7 @@ import React, { Component } from 'react';
 
     handleQuote() {
       this.getEmotion();
-      this.setState({ qutoeBox: 'quoteBox' });
+      this.setState({ quoteBox: 'quoteBox' });
     }
 
     render() {
