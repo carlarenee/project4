@@ -95,6 +95,7 @@ class App extends Component {
       week: 'hidden',
       emotionLabelsContainer: 'hidden',
       soundsLike: 'hidden',
+      closeChallengeBtn: 'hidden',
     };
   }
 
@@ -430,7 +431,9 @@ class App extends Component {
     this.getDayThreeAverages(username);
     this.getDayTwoAverages(username);
     this.getDayOneAverages(username);
-    this.setState({ week: 'week'  });
+    this.setState({
+      week: 'week',
+    });
   }
 
   handleAnimation() {
@@ -438,6 +441,7 @@ class App extends Component {
       animationContainer: 'animationContainer',
       bigContainerContent: 'hidden',
       bigContainer: 'hidden',
+      closeChallengeBtn: 'closeChallengeBtn',
     });
   }
 
@@ -580,8 +584,8 @@ class App extends Component {
                 opacitySadness={this.state.score.sadness}
               />
               <div className="options">
-              <button onClick={() => {this.handleAverages(this.state.username)}}>get averages</button>
-              <button onClick={() => {this.handleAnimation()}}>DailyChallenge</button>
+              <button className="buttons" onClick={() => {this.handleAverages(this.state.username)}}>See My History</button>
+              <button className="buttons" onClick={() => {this.handleAnimation()}}>Daily Challenge</button>
 
               </div>
               <Quote
@@ -638,8 +642,9 @@ class App extends Component {
               />
             </div>
           </div>
-              <button onClick={() => {this.closeChallenge()}}>Close Chanllenge</button>
-              <Challenge animationContainer={this.state.animationContainer}/>
+              <button className={this.state.closeChallengeBtn} onClick={() => {this.closeChallenge()}}>Close Chanllenge</button>
+              <Challenge animationContainer={this.state.animationContainer} />
+
       </div>
     );
   }

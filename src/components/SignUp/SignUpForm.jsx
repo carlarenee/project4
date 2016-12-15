@@ -7,8 +7,9 @@ class SignUpForm extends Component {
     return (
       <div className={this.props.signUpBoxDisplay}>
         <div className="signUpBoxContent">
-        <h2>Welcome to Weather Report</h2>
-        <p>Tell me more about yourself:</p>
+        <h2>Welcome to Heyooo</h2>
+        <p>A Daily Check-Up For Your Moods</p>
+        <p>SignUp Now for your first checkup!</p>
         <input
           type="text"
           placeholder="username"

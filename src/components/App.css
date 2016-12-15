@@ -3,6 +3,7 @@
 }
 
 .bigContainer {
+  background-image: url(./Challenge/flowers.jpg);
   line-height: 3.5em;
   text-align: center;
   z-index: 1;
@@ -20,8 +21,9 @@
 }
 
 .bigContainerContent {
-  height: 70vh;
-  width: 70vw;
+  background-color: rgba(255, 255, 255, 0.3);
+  height: 80vh;
+  width: 80vw;
 }
 
 .inputBox {
@@ -33,10 +35,11 @@
 }
 
 .signUpBox {
+
   text-align: center;
   height: 100vh;
   width: 100vw;
-  background-color: rgba(0, 0, 0, 0.4);
+  background-color: rgb(158, 3, 76);
   z-index: 5;
   margin: 0 auto;
   display: flex;
@@ -48,6 +51,7 @@
 }
 
 .signUpBoxContent {
+  border-radius: 15px;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
@@ -63,7 +67,7 @@
   text-align: center;
   height: 100vh;
   width: 100vw;
-  background-color: rgba(0, 0, 0, .4);
+  background-color: rgb(158, 3, 76);
   z-index: 5;
   margin: 0 auto;
   display: flex;
@@ -75,6 +79,7 @@
 }
 
 .logInBoxContent {
+  border-radius: 15px;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
@@ -92,10 +97,6 @@
   margin: 0 auto;
 }
 
-.soundsLike {
-
-}
-
 .quoteBox {
   border-radius: 15px;
   color: #f2f2f2;
@@ -104,10 +105,23 @@
   font-size: 1.2em;
   line-height: 1.2em;
   position: relative;
-  height: 20vh;
+  height: 15vh;
   width: 100%;
   background-color: #00A5CF;
   bottom: 0;
 }
 
+.closeChallengeBtn {
+  visibility: visible;
+}
+
+.buttons {
+  color: #f2f2f2;
+  margin-bottom: 15px;
+  margin: 10px;
+  height: 40px;
+  width: 68px;
+  border-radius: 10px;
+  background-color: #439A86;
+}
 

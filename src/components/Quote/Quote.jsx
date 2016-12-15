@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import style from './Quote.css';
 
   class Quote extends Component {
 
@@ -69,7 +70,7 @@ import React, { Component } from 'react';
     render() {
       return (
         <div>
-          <button onClick={() => this.handleQuote()}>Quote of the Day</button>
+          <button className="quoteButton" onClick={() => this.handleQuote()}>Quote of the Day</button>
           <div className={this.state.quoteBox}>
             <p>{this.state.quote}</p>
             <p>{this.state.author}</p>

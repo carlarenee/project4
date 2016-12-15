@@ -8,6 +8,7 @@ class LogInForm extends Component {
     return (
       <div className={this.props.logInBoxDisplay}>
         <div className="logInBoxContent">
+          <h2>Go ahead and type that in one more time</h2>
           <input
             type="text"
             placeholder="username"

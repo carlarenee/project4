@@ -1,12 +1,12 @@
 .week {
   margin: 0 auto;
   width: 80vw;
-  height: 20vh;
+  height: 15vh;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-between;
-  align-items: flex-end;
+  align-items: center;
   align-content: center;
 }
 
