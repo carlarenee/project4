@@ -7623,7 +7623,7 @@
   \************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
-	'use strict';Object.defineProperty(exports,"__esModule",{value:true});var _createClass=function(){function defineProperties(target,props){for(var i=0;i<props.length;i++){var descriptor=props[i];descriptor.enumerable=descriptor.enumerable||false;descriptor.configurable=true;if("value"in descriptor)descriptor.writable=true;Object.defineProperty(target,descriptor.key,descriptor);}}return function(Constructor,protoProps,staticProps){if(protoProps)defineProperties(Constructor.prototype,protoProps);if(staticProps)defineProperties(Constructor,staticProps);return Constructor;};}();var _react=__webpack_require__(/*! react */ 1);var _react2=_interopRequireDefault(_react);var _LetsBreathe=__webpack_require__(/*! ./LetsBreathe.mp4 */ 190);var _LetsBreathe2=_interopRequireDefault(_LetsBreathe);function _interopRequireDefault(obj){return obj&&obj.__esModule?obj:{default:obj};}function _classCallCheck(instance,Constructor){if(!(instance instanceof Constructor)){throw new TypeError("Cannot call a class as a function");}}function _possibleConstructorReturn(self,call){if(!self){throw new ReferenceError("this hasn't been initialised - super() hasn't been called");}return call&&(typeof call==="object"||typeof call==="function")?call:self;}function _inherits(subClass,superClass){if(typeof superClass!=="function"&&superClass!==null){throw new TypeError("Super expression must either be null or a function, not "+typeof superClass);}subClass.prototype=Object.create(superClass&&superClass.prototype,{constructor:{value:subClass,enumerable:false,writable:true,configurable:true}});if(superClass)Object.setPrototypeOf?Object.setPrototypeOf(subClass,superClass):subClass.__proto__=superClass;}var Challenge=function(_Component){_inherits(Challenge,_Component);function Challenge(){_classCallCheck(this,Challenge);return _possibleConstructorReturn(this,(Challenge.__proto__||Object.getPrototypeOf(Challenge)).apply(this,arguments));}_createClass(Challenge,[{key:'render',value:function render(){return _react2.default.createElement('div',{className:this.props.animationContainer},_react2.default.createElement('video',{width:'720',height:'405',controls:true},_react2.default.createElement('source',{src:_LetsBreathe2.default,type:'video/mp4'}),_react2.default.createElement('source',{src:_LetsBreathe2.default,type:'video/ogg'}),'Your browser does not support the video tag.'));}}]);return Challenge;}(_react.Component);exports.default=Challenge;
+	'use strict';Object.defineProperty(exports,"__esModule",{value:true});var _createClass=function(){function defineProperties(target,props){for(var i=0;i<props.length;i++){var descriptor=props[i];descriptor.enumerable=descriptor.enumerable||false;descriptor.configurable=true;if("value"in descriptor)descriptor.writable=true;Object.defineProperty(target,descriptor.key,descriptor);}}return function(Constructor,protoProps,staticProps){if(protoProps)defineProperties(Constructor.prototype,protoProps);if(staticProps)defineProperties(Constructor,staticProps);return Constructor;};}();var _react=__webpack_require__(/*! react */ 1);var _react2=_interopRequireDefault(_react);var _LetsBreathe=__webpack_require__(/*! ./LetsBreathe.mp4 */ 190);var _LetsBreathe2=_interopRequireDefault(_LetsBreathe);var _sad=__webpack_require__(/*! ./sad.mp4 */ 192);var _sad2=_interopRequireDefault(_sad);var _square=__webpack_require__(/*! ./square.mp4 */ 193);var _square2=_interopRequireDefault(_square);function _interopRequireDefault(obj){return obj&&obj.__esModule?obj:{default:obj};}function _classCallCheck(instance,Constructor){if(!(instance instanceof Constructor)){throw new TypeError("Cannot call a class as a function");}}function _possibleConstructorReturn(self,call){if(!self){throw new ReferenceError("this hasn't been initialised - super() hasn't been called");}return call&&(typeof call==="object"||typeof call==="function")?call:self;}function _inherits(subClass,superClass){if(typeof superClass!=="function"&&superClass!==null){throw new TypeError("Super expression must either be null or a function, not "+typeof superClass);}subClass.prototype=Object.create(superClass&&superClass.prototype,{constructor:{value:subClass,enumerable:false,writable:true,configurable:true}});if(superClass)Object.setPrototypeOf?Object.setPrototypeOf(subClass,superClass):subClass.__proto__=superClass;}var Challenge=function(_Component){_inherits(Challenge,_Component);function Challenge(){_classCallCheck(this,Challenge);var _this=_possibleConstructorReturn(this,(Challenge.__proto__||Object.getPrototypeOf(Challenge)).call(this));_this.state={video:''};return _this;}_createClass(Challenge,[{key:'randomVideo',value:function randomVideo(){var videos=[_LetsBreathe2.default,_sad2.default,_square2.default];var i=Math.floor(Math.random()*3);console.log(i);this.setState({video:videos[i]});}},{key:'componentWillMount',value:function componentWillMount(){this.randomVideo();}},{key:'render',value:function render(){return _react2.default.createElement('div',{className:this.props.animationContainer},_react2.default.createElement('video',{width:'720',height:'405',controls:true},_react2.default.createElement('source',{src:this.state.video,type:'video/mp4'}),_react2.default.createElement('source',{src:this.state.video,type:'video/ogg'}),'Your browser does not support the video tag.'));}}]);return Challenge;}(_react.Component);exports.default=Challenge;
 
 /***/ },
 /* 190 */
@@ -7642,6 +7642,24 @@
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = __webpack_require__.p + "/img/leaf.sZggD.jpg";
+
+/***/ },
+/* 192 */
+/*!******************************************!*\
+  !*** ./src/components/Challenge/sad.mp4 ***!
+  \******************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__.p + "/img/sad.1fNRx.mp4";
+
+/***/ },
+/* 193 */
+/*!*********************************************!*\
+  !*** ./src/components/Challenge/square.mp4 ***!
+  \*********************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__.p + "/img/square.1PBt8.mp4";
 
 /***/ }
 /******/ ]);
