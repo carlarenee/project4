@@ -33,12 +33,14 @@ Frontend: React
 
 Watson Tone Analyzer
 
-## Tests
+## Hurdles
 
+One of the biggest challenges was getting the correct user history to appear. I used 'date' instead of timestamp to bring back data from the DB. This didn't prove to be very accurate.
 
-## Contributors
+Also, I underestimated the amount of time it would take to make video animations. The intention was to have several videos categorized by mood. At this point, I only have 3 videos ready. 
 
-## License
+## Moving Forward
 
+I need to seed my database with more quotes. I want to make a library of daily challenge materials.
 
 ![wireframe 1](images/wecomePageWireframe.png)
